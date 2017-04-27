@@ -1,0 +1,37 @@
+{
+  "name": "oxfordMushroomCompany",
+  "version": "0.1.0",
+  "description": "Website for the Oxford Mushroom Company",
+  "scripts": {
+    "clean:dist": "rm -rf dist && mkdir -p dist/assets/{images,stylesheets}",
+    "build": "scripts/build.sh",
+    "build:css": "node-sass src/assets/stylesheets/ -o dist/assets/stylesheets/ --output-style compressed",
+    "postbuild:css": "postcss -u autoprefixer -u postcss-pxtorem -c postcss.json -d dist/assets/stylesheets/ dist/assets/stylesheets/*.css",
+    "lint:css": "stylelint --config .stylelintrc src/assets/stylesheets/**/*.scss --syntax scss -f verbose",
+    "build:html": "node scripts/htmlBuilder.js",
+    "copy:images": "rm -rf dist/assets/images && mkdir -p dist/assets/images && cp -R src/assets/images/* dist/assets/images/",
+    "lint:js": "standard",
+    "test": "npm run lint:js && npm run lint:css",
+    "watch:css": "node-sass --source-map true -wr src/assets/stylesheets/ -o dist/assets/stylesheets/",
+    "watch:html": "nodemon -w src/views/ -e njk -x 'npm run build:html'",
+    "watch:images": "nodemon -w src/assets/images/ -e jpg,png -x 'npm run copy:images'",
+    "watch:js": "nodemon -w src/ -e js -x 'npm run build:html'",
+    "prewatch": "npm run clean:dist && npm run build:css",
+    "watch": "npm run watch:html & npm run watch:images & npm run watch:css & npm run watch:js",
+    "hash:assets": "scripts/hash-assets.sh",
+    "hash:images": "scripts/hash-images.sh",
+    "integrity:assets": "scripts/integrity-assets.sh"
+  },
+  "author": "feedMyPixel",
+  "contributors": "Ben Chidgey <ben@feedmypixel.com>",
+  "dependencies": {
+    "autoprefixer": "6.7.7",
+    "node-sass": "4.5.2",
+    "nodemon": "1.11.0",
+    "nunjucks": "3.0.0",
+    "postcss-cli": "3.2.0",
+    "postcss-pxtorem": "4.0.0",
+    "standard": "10.0.2",
+    "stylelint": "7.10.1"
+  }
+}

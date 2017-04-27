@@ -1,0 +1,34 @@
+{% from "partials/macros/icon.njk" import icon as icon %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Fresh, Organic, locally grown Shiitake and Oyster mushrooms"/>
+  <meta name="keywords" content="Mushrooms,Shiitake,Oyster,Oxford,fresh,organic,local"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="feedMyPixel Ltd."/>
+  <meta name="copyright" content="The Oxford Mushroom Co."/>
+  <meta name="rating" content="general"/>
+  <meta name="distribution" content="global"/>
+  <meta http-equiv="imagetoolbar" content="no"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  {% include "partials/includes/old-ie.njk" %}
+
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/assets/stylesheets/application.css">
+  <!--<![endif]-->
+
+  {% include "partials/includes/svg-icons.njk" %}
+
+  <title>{{ siteName }}</title>
+</head>
+<body>
+  <main class="main">
+    {% block content %} {% endblock %}
+  </main>
+  {% include "partials/includes/footer.njk" %}
+</body>
+</html>

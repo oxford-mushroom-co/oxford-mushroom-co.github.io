@@ -1,0 +1,87 @@
+{% extends "partials/templates/layout.njk" %}
+
+{% block content %}
+  <header class="centered-section">
+    <h1 class="h1">The Oxford Mushroom Co.</h1>
+  </header>
+  <section>
+    <img class="hero" src="/assets/images/mushroom.jpg" alt="Shiitake mushrooms">
+  </section>
+  <section class="centered-section">
+    <p><strong class="highlight">The Oxford Mushroom Co.</strong> is a small-scale organic mushroom farm located in
+      South Oxford just over a mile from the
+      city centre.</p>
+    <p>We are ideally placed to supply the local community with locally grown mushrooms, whilst maintaining a low carbon foot
+      print and providing fresh, organic produce with minimal food miles.
+      Our mushrooms are grown in re-purposed ex-Ministry Of Defence shipping containers.
+    </p>
+    <p>
+      To begin with The Oxford Mushroom Co. are growing Shiitake mushrooms with future plans to introducing other exotic
+      varieties like Oyster mushrooms.
+    </p>
+  </section>
+  <section class="centered-section">
+    <ul class="grid">
+      <li class="info grid__col-1-3">
+        <figure class="img">
+          <img src="/assets/images/shiitake.jpg" alt="Oxford Mushroom Co. - Shiitake Mushrooms">
+        </figure>
+        <header class="info__header">
+          <h2 class="h2">Exotic organic mushrooms</h2>
+        </header>
+        <article>
+          <ul class="list list--bullet">
+            <li class="list__item">Shiitake and Oyster</li>
+            <li class="list__item">great flavour</li>
+            <li class="list__item">nutritional value</li>
+            <li class="list__item">medicinal healing properties</li>
+            <li class="list__item">grown on organic oak sawdust substrate blocks</li>
+          </ul>
+        </article>
+      </li>
+      <li class="info grid__col-1-3">
+        <figure class="img">
+          <img src="/assets/images/oxford-view.jpg" alt="View of Oxford from the farm">
+        </figure>
+        <header class="info__header">
+          <h2 class="h2">Locally grown, fresh produce</h2>
+        </header>
+        <article>
+          <ul class="list list--bullet">
+            <li class="list__item">~1 mile from Oxford city centre</li>
+            <li class="list__item">minimal food miles</li>
+            <li class="list__item">fresh Shiitake and Oyster mushrooms</li>
+            <li class="list__item">low carbon footprint</li>
+          </ul>
+        </article>
+      </li>
+      <li class="info grid__col-1-3">
+        <figure class="img">
+          <img src="/assets/images/containers.jpg" alt="Our grow containers">
+        </figure>
+        <header class="info__header">
+          <h2 class="h2">Oxfords 1st mushroom freight farm</h2>
+        </header>
+        <article>
+          <ul class="list list--bullet">
+            <li class="list__item">environmentally friendly</li>
+            <li class="list__item">ex MOD shipping containers</li>
+            <li class="list__item">solar panels</li>
+            <li class="list__item">rain water harvesting</li>
+          </ul>
+        </article>
+      </li>
+    </ul>
+  </section>
+  <section class="centered-section">
+    <h2>Contact us</h2>
+    <ul class="list">
+      <li class="list__item">
+        <div class="contact-title">email:</div> <a href="mailto:lee&#64;oxfordmushroomco.com">lee&#64;oxfordmushroomco.com</a>
+      </li>
+      <li class="list__item">
+        <div class="contact-title">phone:</div> <a href="tel:01865 456363">01865 456363</a>
+      </li>
+    </ul>
+  </section>
+{% endblock %}

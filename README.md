@@ -23,7 +23,7 @@ $ npm i
 
 ### Npm Scripts
 
-To work on the sire you can watch CSS, html and images via:
+To work on the site you can watch CSS, html and images via:
 ```bash
 $ npm run watch
 ```

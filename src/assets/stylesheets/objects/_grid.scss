@@ -1,0 +1,65 @@
+@import "../tools/media-query";
+@import "../settings/vars";
+@import "../tools/oldie";
+
+%grid__col {
+  display: block;
+  width: 100%;
+
+  @include media-query(600px) {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  @include old-ie {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+
+.grid {
+  display: block;
+  width: 100%;
+
+  @include media-query(600px) {
+    display: table;
+  }
+
+  @include old-ie {
+    display: table;
+  }
+}
+
+.grid__col-1-3 {
+  @extend %grid__col;
+
+  @include media-query(600px) {
+    width: 33.33%;
+  }
+
+  @include old-ie {
+    width: 33.33%;
+  }
+}
+
+.grid__col-2-3 {
+  @extend %grid__col;
+
+  @include media-query(600px) {
+    width: 66.66%;
+  }
+
+  @include old-ie {
+    width: 66.66%;
+  }
+}
+
+.grid > [class*="grid__col-"] {
+  @include media-query(600px) {
+    padding-right: $gutter;
+  }
+
+  @include old-ie {
+    padding-right: $gutter;
+  }
+}

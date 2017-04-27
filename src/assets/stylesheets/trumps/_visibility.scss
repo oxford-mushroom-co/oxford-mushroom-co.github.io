@@ -1,0 +1,21 @@
+@import "../tools/oldie";
+
+.is-hidden {
+  display: none !important;
+}
+
+.hide-old-ie {
+  display: block;
+
+  @include old-ie {
+    display: none;
+  }
+}
+
+.show-old-ie {
+  display: none;
+
+  @include old-ie {
+    display: block;
+  }
+}

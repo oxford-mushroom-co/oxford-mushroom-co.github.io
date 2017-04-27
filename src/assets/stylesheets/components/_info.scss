@@ -1,0 +1,14 @@
+@import "../tools/media-query";
+@import "../tools/oldie";
+
+.info {}
+
+.info__header {
+  @include media-query(600px) {
+    min-height: 60px;
+  }
+
+  @include old-ie {
+    min-height: 60px;
+  }
+}

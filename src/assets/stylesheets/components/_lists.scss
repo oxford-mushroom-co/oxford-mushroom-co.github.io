@@ -1,0 +1,37 @@
+@import "../settings/vars";
+@import "../settings/colours";
+
+.list {
+  margin-bottom: $gutter;
+  list-style: none;
+}
+
+.list__item {
+  padding-bottom: $gutter/4;
+}
+
+.list--inline {
+  margin-bottom: $gutter;
+
+  .list__item {
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: $gutter/2;
+  }
+}
+
+.list--bullet {
+  display: table;
+  margin-bottom: $gutter*2;
+
+  .list__item {
+    display: table-row;
+    font-size: $font-18;
+
+    &:before {
+      content: "•";
+      display: table-cell;
+      padding-right: $gutter/4;
+    }
+  }
+}

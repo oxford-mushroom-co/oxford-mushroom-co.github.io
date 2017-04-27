@@ -1,0 +1,17 @@
+@import "../settings/vars";
+@import "../tools/media-query";
+@import "../tools/oldie";
+
+.centered-section {
+  padding: $gutter/2;
+  max-width: $content-max-width;
+
+  @include media-query($content-max-width) {
+    margin: 0 auto;
+  }
+
+  @include old-ie {
+    margin: 0 auto;
+    width: $content-max-width;
+  }
+}

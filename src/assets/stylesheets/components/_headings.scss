@@ -1,0 +1,15 @@
+@import "../settings/colours";
+@import "../settings/vars";
+
+.h1 {
+  color: $off-black;
+  margin-top: $gutter*1.6;
+  font-size: $font-48;
+  line-height: 1.2;
+}
+
+.h2 {
+  font-size: $font-24;
+  line-height: 1.2;
+}
+

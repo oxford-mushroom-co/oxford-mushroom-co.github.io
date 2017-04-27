@@ -1,0 +1,89 @@
+@import "../settings/colours";
+@import "../settings/vars";
+@import "../tools/media-query";
+@import "../tools/oldie";
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%; // http://alistapart.com/article/howtosizetextincss
+  letter-spacing: .2px;
+  line-height: 1.7;
+  color: $off-black;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: Muli, helvetica neue, helvetica, arial, sans-serif;
+  text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+ul,
+ol,
+dd,
+p,
+pre,
+table,
+fieldset,
+hr {
+  margin-top: 0;
+  margin-bottom: $baseline;
+}
+
+figure,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: $font-18;
+}
+
+img {
+  height: auto;
+  display: block;
+  max-width: 100%;
+
+  @include old-ie {
+    width: 100%;
+  }
+}
+
+::selection {
+  background: $dark-mushroom;
+  text-shadow: none;
+}
+
+@include old-ie {
+  section,
+  footer,
+  header,
+  article,
+  figure {
+    display: block;
+  }
+}

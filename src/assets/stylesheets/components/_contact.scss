@@ -1,0 +1,15 @@
+@import "../tools/media-query";
+@import "../tools/oldie";
+
+.contact-title {
+
+  @include media-query(600px) {
+    display: inline-block;
+    min-width: 60px;
+  }
+
+  @include old-ie {
+    display: inline-block;
+    min-width: 60px;
+  }
+}

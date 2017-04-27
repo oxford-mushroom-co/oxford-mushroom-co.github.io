@@ -1,0 +1,45 @@
+@import "../settings/colours";
+
+// https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/
+.icon-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+}
+
+.github-icon {
+  fill: darken($grey, 20%);
+
+  &:hover {
+    fill: $off-black;
+  }
+}
+
+.facebook-icon {
+  fill: $facebook;
+
+  &:hover {
+    fill: lighten($facebook, 20%);
+  }
+}
+
+.twitter-icon {
+  fill: $twitter;
+
+  &:hover {
+    fill: lighten($twitter, 10%);
+  }
+}
+
+.instagram-icon {
+  fill: $black;
+
+  &:hover {
+    fill: lighten($black, 40%);
+  }
+}

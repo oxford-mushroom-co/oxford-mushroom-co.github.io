@@ -1,6 +1,7 @@
 @import "../settings/colours";
 @import "../settings/vars";
 @import "../tools/media-query";
+@import "../tools/old-ie";
 
 .footer {
   width: 100%;
@@ -12,6 +13,10 @@
 
 .right-aligned\@large {
   @include media-query(600px) {
+    text-align: right;
+  }
+
+  @include old-ie {
     text-align: right;
   }
 }

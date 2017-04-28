@@ -12,6 +12,8 @@
   border-radius: 6px;
   background-color: rgba(25,23,23,0.55);
   color: $white;
+  font-family: 'Amatic SC', cursive;
+  font-size: $font-24;
   font-weight: bold;
   line-height: 1.2;
   padding: $gutter;
@@ -22,33 +24,28 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  font-size: $font-24;
 
-  @include media-query(100px) {
-    font-size: $font-24;
-  }
-
-  @include media-query(543px) {
+  @include media-query(410px) {
     font-size: $font-36;
   }
 
-  @include media-query(689px) {
+  @include media-query(511px) {
     font-size: $font-48;
   }
 
-  @include media-query(834px) {
+  @include media-query(612px) {
     font-size: $font-60;
   }
 
-  @include media-query(980px) {
+  @include media-query(713px) {
     font-size: $font-72;
   }
 
-  @include media-query(1125px) {
+  @include media-query(814px) {
     font-size: $font-84;
   }
 
-  @include media-query(1271px) {
+  @include media-query(915px) {
     font-size: $font-96;
   }
 

@@ -13,7 +13,7 @@
     "lint:js": "standard",
     "test": "npm run lint:js && npm run lint:css",
     "watch:css": "node-sass --source-map true -wr src/assets/stylesheets/ -o dist/assets/stylesheets/",
-    "watch:html": "nodemon -w src/views/ -e njk -x 'npm run build:html'",
+    "watch:html": "nodemon -w src/ -e njk -x 'npm run build:html'",
     "watch:images": "nodemon -w src/assets/images/ -e jpg,png -x 'npm run copy:images'",
     "watch:js": "nodemon -w src/ -e js -x 'npm run build:html'",
     "prewatch": "npm run clean:dist && npm run build:css",

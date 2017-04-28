@@ -13,10 +13,10 @@
 }
 
 .github-icon {
-  fill: darken($grey, 20%);
+  fill: $off-black;
 
   &:hover {
-    fill: $off-black;
+    fill: darken($grey, 20%);
   }
 }
 
@@ -37,6 +37,16 @@
 }
 
 .instagram-icon {
+  fill: $black;
+
+  &:hover {
+    fill: lighten($black, 40%);
+  }
+}
+
+.soil-association-icon {
+  width: 100px;
+  height: 100px;
   fill: $black;
 
   &:hover {

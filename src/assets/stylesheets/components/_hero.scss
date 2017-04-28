@@ -1,6 +1,63 @@
 @import "../settings/vars";
+@import "../settings/colours";
+@import "../tools/media-query";
+@import "../tools/old-ie";
 
 .hero {
-  width: 100%;
+  position: relative;
   margin-bottom: $gutter;
+}
+
+.hero__text {
+  border-radius: 6px;
+  background-color: rgba(25,23,23,0.55);
+  color: $white;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: $gutter;
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: $font-24;
+
+  @include media-query(100px) {
+    font-size: $font-24;
+  }
+
+  @include media-query(543px) {
+    font-size: $font-36;
+  }
+
+  @include media-query(689px) {
+    font-size: $font-48;
+  }
+
+  @include media-query(834px) {
+    font-size: $font-60;
+  }
+
+  @include media-query(980px) {
+    font-size: $font-72;
+  }
+
+  @include media-query(1125px) {
+    font-size: $font-84;
+  }
+
+  @include media-query(1271px) {
+    font-size: $font-96;
+  }
+
+  @include old-ie {
+    font-size: $font-96;
+    background-color: $off-black;
+    top: 100px;
+    left: 164px;
+    filter: alpha(opacity=60);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=60)";
+  }
 }

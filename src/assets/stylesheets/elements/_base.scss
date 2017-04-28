@@ -30,7 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-family: Muli, helvetica neue, helvetica, arial, sans-serif;
+  font-family: Antic, helvetica neue, helvetica, arial, sans-serif;
   text-size-adjust: 100%;
 }
 
@@ -74,7 +74,7 @@ img {
 }
 
 ::selection {
-  background: $dark-mushroom;
+  background: $mushroom;
   text-shadow: none;
 }
 

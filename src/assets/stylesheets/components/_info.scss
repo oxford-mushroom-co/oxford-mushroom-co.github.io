@@ -5,10 +5,10 @@
 
 .info__header {
   @include media-query(600px) {
-    min-height: 60px;
+    min-height: 40px;
   }
 
   @include old-ie {
-    min-height: 60px;
+    min-height: 40px;
   }
 }

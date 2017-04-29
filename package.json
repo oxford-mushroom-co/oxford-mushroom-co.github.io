@@ -6,7 +6,7 @@
     "clean:dist": "rm -rf dist && mkdir -p dist/assets/{images,stylesheets}",
     "build": "scripts/build.sh",
     "build:css": "node-sass src/assets/stylesheets/ -o dist/assets/stylesheets/ --output-style compressed",
-    "postbuild:css": "postcss -u autoprefixer -u postcss-pxtorem -c postcss.json -d dist/assets/stylesheets/ dist/assets/stylesheets/*.css",
+    "postbuild:css": "postcss dist/assets/stylesheets/*.css -d dist/assets/stylesheets/ --parser sugarss",
     "lint:css": "stylelint --config .stylelintrc src/assets/stylesheets/**/*.scss --syntax scss -f verbose",
     "build:html": "node scripts/htmlBuilder.js",
     "copy:images": "rm -rf dist/assets/images && mkdir -p dist/assets/images && cp -R src/assets/images/* dist/assets/images/",

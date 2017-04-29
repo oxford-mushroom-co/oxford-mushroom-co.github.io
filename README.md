@@ -4,7 +4,6 @@ A site for the Oxford Mushroom Co. A static html site built via nunjucks.
 ## Table of Contents
 - [Requirements](#requirements)
 - [Setup](#setup)
-- [Run](#run)
 - [Npm Scripts](#npm-scripts)
 - [License](#license)
 

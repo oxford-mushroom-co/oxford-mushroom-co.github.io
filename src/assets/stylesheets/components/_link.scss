@@ -1,0 +1,16 @@
+@import "../settings/colours";
+
+.link {
+  text-decoration: underline;
+  color: $off-black;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:visited,
+  &:focus,
+  &:active {
+    color: $dark-grey;
+  }
+}

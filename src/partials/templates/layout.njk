@@ -13,7 +13,7 @@
   <meta name="distribution" content="global"/>
   <meta http-equiv="imagetoolbar" content="no"/>
 
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway" rel="stylesheet">
 
   {% include "partials/includes/old-ie.njk" %}
 
@@ -23,12 +23,17 @@
 
   {% include "partials/includes/svg-icons.njk" %}
 
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css' rel='stylesheet' />
+
   <title>{{ siteName }}</title>
 </head>
 <body>
   <main class="main">
+    {% include "partials/includes/header.njk" %}
     {% block content %} {% endblock %}
   </main>
   {% include "partials/includes/footer.njk" %}
+  {% include "partials/includes/scripts.njk" %}
 </body>
 </html>

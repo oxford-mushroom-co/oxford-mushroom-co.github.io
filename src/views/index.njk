@@ -1,9 +1,6 @@
 {% extends "partials/templates/layout.njk" %}
 
 {% block content %}
-  <header class="centered-section">
-    <h1 class="h1">Oxford Mushroom Company</h1>
-  </header>
   <section>
     <div class="hero">
       <img src="assets/images/mushroom.jpg" alt="Shiitake mushrooms">
@@ -15,24 +12,19 @@
     </div>
   </section>
   <section class="centered-section">
-    <p><strong class="highlight">The Oxford Mushroom Company</strong> is a small-scale organic mushroom farm located in
-      South Oxford just over a mile from the
-      city centre.</p>
-    <p>We are ideally placed to supply the local community with locally grown mushrooms, whilst maintaining a low carbon
-      foot
-      print and providing fresh, organic produce with minimal food miles.
-      Our mushrooms are grown in re-purposed ex-Ministry Of Defence shipping containers.
+    <p>Hello! we are <strong class="highlight">The Oxford Mushroom Company</strong>. A small-scale organic mushroom farm located in
+      South Oxford and ran by two passionate locals, Lee and Rajo.</p>
+    <p>We are ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon
+      foot print and providing fresh, organic produce with minimal food miles.
+      Our mushrooms are grown with rain water, solar panels and inside of re-purposed ex-Ministry Of Defence shipping containers.
     </p>
-    <p>
-      To begin with The Oxford Mushroom Co. are growing Shiitake mushrooms with future plans to introducing other exotic
-      varieties like Oyster mushrooms.
-    </p>
+    <p>If you would like to know how we can supply delicious mushrooms to you or your business or would like to find out more about our passion for mushrooms please do <a href="#contact-us">get in contact</a>.</p>
   </section>
   <section class="centered-section">
     <ul class="grid">
       <li class="info grid__col-1-3">
         <figure class="img">
-          <img class="info__img" src="assets/images/shiitake.jpg" alt="Oxford Mushroom Co. - Shiitake Mushrooms">
+          <img class="info__img" src="assets/images/organic-mushrooms-1.jpg" alt="Oxford Mushroom Co. - Shiitake Mushrooms">
         </figure>
         <header class="info__header">
           <h2 class="h2">Exotic organic mushrooms</h2>
@@ -43,7 +35,7 @@
             <li class="list__item">great flavour</li>
             <li class="list__item">nutritional value</li>
             <li class="list__item">medicinal healing properties</li>
-            <li class="list__item">grown on organic oak sawdust substrate blocks</li>
+            <li class="list__item">grown on organic oak sawdust</li>
           </ul>
         </article>
       </li>
@@ -65,33 +57,55 @@
       </li>
       <li class="info grid__col-1-3">
         <figure class="img">
-          <img class="info__img" src="assets/images/containers.jpg" alt="Our grow containers">
+          <img class="info__img" src="assets/images/organic-mushrooms.jpg" alt="Our organic mushrooms">
         </figure>
         <header class="info__header">
-          <h2 class="h2">Oxfords 1st mushroom freight farm</h2>
+          <h2 class="h2">Environmentally friendly</h2>
         </header>
         <article>
           <ul class="list list--bullet">
-            <li class="list__item">environmentally friendly</li>
-            <li class="list__item">ex MOD shipping containers</li>
             <li class="list__item">solar panels</li>
             <li class="list__item">rain water harvesting</li>
+            <li class="list__item">re-purposed ex MOD shipping containers</li>
+            <li class="list__item">Oxfords 1st mushroom freight farm</li>
           </ul>
         </article>
       </li>
     </ul>
   </section>
   <section class="centered-section">
-    <h2>Contact us</h2>
-    <ul class="list">
-      <li class="list__item">
-        <div class="contact-title">email:</div>
-        <a href="mailto:lee&#64;oxfordmushroomco.com">lee&#64;oxfordmushroomco.com</a>
-      </li>
-      <li class="list__item">
-        <div class="contact-title">phone:</div>
-        <a href="tel:01865 456363">01865 456363</a>
-      </li>
-    </ul>
+    <div class="divider"></div>
+    <h2 id="contact-us">Contact us</h2>
+    <div class="grid">
+      <div class="grid__col-1-3">
+        <ul class="list">
+          <li class="list__item">
+            <div class="contact-title">email:</div>
+            <a href="mailto:lee&#64;oxfordmushroomco.com">lee&#64;oxfordmushroomco.com</a>
+          </li>
+          <li class="list__item">
+            <div class="contact-title">phone:</div>
+            <a href="tel:07505884986">07505 884986</a>
+          </li>
+        </ul>
+      </div>
+      <div class="grid__col-2-3">
+        <div class="address">
+        <div class="address__title">address:</div>
+          <div class="address__written">
+            <ul class="list">
+              <li class="list__item">The Barn,</li>
+              <li class="list__item">Hinksey Heights,</li>
+              <li class="list__item">South Hinksey,</li>
+              <li class="list__item">Oxford,</li>
+              <li class="list__item">OX1 5AB.</li>
+            </ul>
+          </div>
+          <div class="address__map">
+            <div class="map" id="map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 {% endblock %}

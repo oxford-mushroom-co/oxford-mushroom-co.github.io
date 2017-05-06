@@ -26,12 +26,18 @@
   "author": "feedMyPixel",
   "contributors": "Ben Chidgey <ben@feedmypixel.com>",
   "dependencies": {
+    "nunjucks": "3.0.0"
+  },
+  "devDependencies": {
     "autoprefixer": "6.7.7",
+    "babel-preset-es2015-rollup": "3.0.0",
     "node-sass": "4.5.2",
     "nodemon": "1.11.0",
-    "nunjucks": "3.0.0",
     "postcss-cli": "3.2.0",
     "postcss-pxtorem": "4.0.0",
+    "rollup": "0.41.6",
+    "rollup-plugin-babel": "2.7.1",
+    "rollup-plugin-uglify": "1.0.2",
     "standard": "10.0.2",
     "stylelint": "7.10.1"
   }

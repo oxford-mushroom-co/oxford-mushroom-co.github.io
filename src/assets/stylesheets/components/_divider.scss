@@ -1,0 +1,24 @@
+@import "../settings/colours";
+@import "../settings/vars";
+@import "../tools/media-query";
+@import "../tools/old-ie";
+
+.divider {
+  display: none;
+
+  @include media-query(600px) {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    padding: $gutter/2 0;
+    border-top: 1px solid $light-grey;
+  }
+
+  @include old-ie {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    padding: $gutter/2 0;
+    border-top: 1px solid $light-grey;
+  }
+}

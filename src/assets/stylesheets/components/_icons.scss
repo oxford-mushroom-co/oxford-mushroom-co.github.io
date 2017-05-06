@@ -1,4 +1,5 @@
 @import "../settings/colours";
+@import "../settings/vars";
 
 // https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/
 .icon-wrapper {
@@ -47,9 +48,20 @@
 .soil-association-icon {
   width: 100px;
   height: 100px;
-  fill: $black;
+  fill: lighten($dark-grey, 20%);
 
   &:hover {
-    fill: lighten($black, 40%);
+    fill: $dark-grey;
+  }
+}
+
+.land-workers-alliance-icon {
+  width: 140px;
+  height: 108px;
+  fill: lighten($dark-grey, 20%);
+  margin-right: $gutter;
+
+  &:hover {
+    fill: $dark-grey;
   }
 }

@@ -1,3 +1,3 @@
-import mapbox from './lib/mapbox.js'
+import mapbox from './mapbox/mapbox.js'
 
 mapbox()

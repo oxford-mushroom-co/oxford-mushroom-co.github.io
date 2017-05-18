@@ -1,31 +1,11 @@
 @import "../settings/colours";
 @import "../settings/vars";
-@import "../tools/media-query";
-@import "../tools/old-ie";
 
 .map {
-  width: 484px;
-  height: 250px;
-
-  @include media-query(600px) {
-    width: 354px;
-    height: 120px;
-  }
-
-  @include media-query(650px) {
-    width: 384px;
-    height: 150px;
-  }
-
-  @include media-query(755px) {
-    width: 484px;
-    height: 250px;
-  }
-
-  @include old-ie {
-    width: 484px;
-    height: 250px;
-  }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .marker {

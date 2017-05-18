@@ -1,0 +1,49 @@
+@import "../settings/vars";
+@import "../tools/media-query";
+@import "../tools/old-ie";
+
+.location {
+  @include media-query(1040px) {
+    display: table;
+    width: 100%;
+  }
+
+  @include old-ie {
+    display: table;
+    width: 100%;
+  }
+}
+
+.location__address {
+  @include media-query(1040px) {
+    display: table-cell;
+    vertical-align: top;
+    width: 20%;
+  }
+
+  @include old-ie {
+    display: table-cell;
+    vertical-align: top;
+    width: 20%;
+  }
+}
+
+.location__map {
+  position: relative;
+  min-height: 260px;
+
+  @include media-query(1040px) {
+    display: table-cell;
+    vertical-align: top;
+    width: 80%;
+    height: 300px;
+  }
+
+  @include old-ie {
+    display: table-cell;
+    vertical-align: top;
+    width: 80%;
+    height: 300px;
+  }
+}
+

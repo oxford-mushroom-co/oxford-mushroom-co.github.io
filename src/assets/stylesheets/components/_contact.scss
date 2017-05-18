@@ -1,7 +1,9 @@
 @import "../tools/media-query";
 @import "../tools/old-ie";
+@import "../settings/vars";
 
 .contact-title {
+  margin-bottom: $gutter/2;
 
   @include media-query(600px) {
     display: inline-block;

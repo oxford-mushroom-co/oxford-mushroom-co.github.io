@@ -1,9 +1,9 @@
-{% macro icon(id, fallbackText) %}
+{% macro icon(id, fallbackText, classes) %}
   <span class="icon-wrapper">
       {%- if fallbackText %}
         <span class="show-old-ie">{{ fallbackText }}</span>
       {% endif -%}
-    <svg class="icon {{ id }} hide-old-ie">
+    <svg class="icon {{ id }} {{ classes }} hide-old-ie">
       <use xlink:href="#{{ id }}"></use>
     </svg>
   </span>

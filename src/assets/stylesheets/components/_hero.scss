@@ -1,31 +1,19 @@
 @import "../settings/vars";
-@import "../settings/colours";
-@import "../tools/media-query";
-@import "../tools/old-ie";
 
 .hero {
   position: relative;
-  margin-bottom: $gutter;
+  margin: 0 auto $gutter;
+  max-height: 400px;
+  overflow: hidden;
 }
 
-.hero__text {
-  border-radius: 6px;
-  color: $white;
-  font-family: 'Amatic SC', cursive;
-  font-size: 10vw;
-  font-weight: bold;
-  line-height: 1.2;
-  margin: 0 auto;
-  width: 70%;
-  text-align: center;
+.hero__center {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-
-  @include old-ie {
-    font-size: $font-96;
-    top: 160px;
-    left: 164px;
-  }
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: $content-max-width;
+  margin: auto;
+  padding-bottom: $gutter/2;
+  text-align: right;
 }

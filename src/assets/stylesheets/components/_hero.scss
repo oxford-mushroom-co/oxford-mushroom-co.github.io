@@ -2,9 +2,6 @@
 
 .hero {
   position: relative;
-  margin: 0 auto $gutter;
-  max-height: 400px;
-  overflow: hidden;
 }
 
 .hero__center {
@@ -12,8 +9,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  width: $content-max-width;
   margin: auto;
+  padding-right: $gutter/2;
   padding-bottom: $gutter/2;
   text-align: right;
 }

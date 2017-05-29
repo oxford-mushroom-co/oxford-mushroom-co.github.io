@@ -12,7 +12,7 @@
 }
 
 .list--inline {
-  margin-bottom: 0;
+  margin-bottom: $gutter;
 
   .list__item {
     vertical-align: middle;

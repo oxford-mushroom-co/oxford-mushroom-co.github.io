@@ -3,7 +3,7 @@
 @import "../tools/old-ie";
 
 .centered-section {
-  padding: $gutter/2;
+  margin: $gutter/2;
   max-width: $content-max-width;
 
   @include media-query($content-max-width) {

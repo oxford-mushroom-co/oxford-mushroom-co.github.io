@@ -1,5 +1,6 @@
 @import "../settings/colours";
 @import "../settings/vars";
+@import "../tools/media-query";
 
 // https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/
 .icon-wrapper {
@@ -14,8 +15,13 @@
 }
 
 .icon--large {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+
+  @include media-query($content-max-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .github-icon {

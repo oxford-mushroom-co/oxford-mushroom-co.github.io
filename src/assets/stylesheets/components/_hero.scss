@@ -1,21 +1,58 @@
 @import "../settings/vars";
+@import "../tools/media-query";
+@import "../tools/old-ie";
 
 .hero {
-  position: relative;
   margin-bottom: $gutter;
+
+  @include media-query($content-max-width) {
+    position: relative;
+  }
+
+  @include old-ie {
+    position: relative;
+  }
 }
 
 .hero__img {
-  border-radius: 4px;
+  max-height: 800px;
+
+  @include media-query(600px) {
+    border-radius: 4px;
+    margin: $gutter/2 auto 0;
+  }
+
+  @include old-ie {
+    border-radius: 4px;
+    margin-top: $gutter/2;
+    max-height: 1000px;
+  }
 }
 
 .hero__center {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  padding-right: $gutter/2;
-  padding-bottom: $gutter/2;
-  text-align: right;
+  display: none;
+
+  @include media-query($content-max-width) {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-right: $gutter/2;
+    padding-bottom: $gutter/2;
+    display: block;
+  }
+
+  @include old-ie {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-right: $gutter/2;
+    padding-bottom: $gutter/2;
+    display: block;
+  }
 }

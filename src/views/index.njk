@@ -1,5 +1,6 @@
 {% extends "partials/templates/layout.njk" %}
 
+{# TODO change all thes urls before live! #}
 {% block twitter %}
   {{ twitterCard(
     'The Oxford Mushroom Co.',
@@ -10,7 +11,7 @@
 
 {% block facebook %}
   {{ facebookOpenGraph(
-    '',
+    'https://feedmypixel.github.io/oxford-mushroom-co/',
     'The Oxford Mushroom Co.',
     'We are the Oxford Mushroom Company, ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh, organic produce with minimal food miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us Oxfords first mushroom freight farm!',
   'https://feedmypixel.github.io/oxford-mushroom-co/assets/images/hero/shiitake_large.jpg'

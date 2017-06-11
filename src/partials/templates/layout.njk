@@ -1,5 +1,7 @@
 {% from "partials/macros/icon.njk" import icon %}
 {% from "partials/macros/image.njk" import image %}
+{% from "partials/macros/facebook-open-graph.njk" import facebookOpenGraph %}
+{% from "partials/macros/twitter-card.njk" import twitterCard %}
 
 <!DOCTYPE html>
 <html>
@@ -27,14 +29,24 @@
   <script src='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css' rel='stylesheet' />
 
+  {% block twitter %}{% endblock %}
+  {% block facebook %}{% endblock %}
+
   <title>{{ siteName }}</title>
 </head>
 <body>
   <main class="main">
-    {% include "partials/includes/header.njk" %}
-    {% block content %} {% endblock %}
+    {% block header %}
+      <section class="centered-section">
+        <header>
+          <h1 class="h1">The Oxford Mushroom Co.</h1>
+        </header>
+      </section>
+    {% endblock %}
+    {% block content %}{% endblock %}
   </main>
   {% include "partials/includes/footer.njk" %}
   {% include "partials/includes/scripts.njk" %}
+  {% include "partials/includes/google-analytics.njk" %}
 </body>
 </html>

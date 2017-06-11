@@ -1,5 +1,22 @@
 {% extends "partials/templates/layout.njk" %}
 
+{% block twitter %}
+  {{ twitterCard(
+    'The Oxford Mushroom Co.',
+    'We are the Oxford Mushroom Company, ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh, organic produce with minimal food miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us Oxfords first mushroom freight farm!',
+    'https://feedmypixel.github.io/oxford-mushroom-co/assets/images/hero/shiitake_large.jpg'
+  ) }}
+{% endblock %}
+
+{% block facebook %}
+  {{ facebookOpenGraph(
+    '',
+    'The Oxford Mushroom Co.',
+    'We are the Oxford Mushroom Company, ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh, organic produce with minimal food miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us Oxfords first mushroom freight farm!',
+  'https://feedmypixel.github.io/oxford-mushroom-co/assets/images/hero/shiitake_large.jpg'
+  ) }}
+{% endblock %}
+
 {% block content %}
   <section class="centered-section">
     <div class="hero">
@@ -10,8 +27,8 @@
         [
           'assets/images/hero/shiitake_large.jpg 3000w',
           'assets/images/hero/shiitake_medium.jpg 2000w',
-          'assets/images/hero/shiitake_small.jpg 1500w'
-          'assets/images/hero/shiitake_micro.jpg 1500w'
+          'assets/images/hero/shiitake_small.jpg 1500w',
+          'assets/images/hero/shiitake_micro.jpg 1000w'
         ],
         '100vw'
       ) }}
@@ -38,12 +55,9 @@
     </div>
   </section>
   <section class="centered-section">
-    <p>We are <strong class="highlight">The Oxford Mushroom Company</strong>. A small-scale organic mushroom farm located in
-      South Oxford and ran by two passionate locals, Lee and Rajo.</p>
-    <p>We are ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon
-      foot print and providing fresh, organic produce with minimal food miles.
-      Our mushrooms are grown with rain water, solar panels and inside of re-purposed ex-Ministry Of Defence shipping containers.
-    </p>
+    <p>We are Lee and Rajo, two passionate locals running a small-scale organic mushroom farm located in
+      South Oxford.</p>
+    <p>We are ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh, organic produce with minimal food miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us Oxfords first mushroom freight farm!</p>
     <p>If you would like to know how we can supply delicious mushrooms to you or your business or would like to find out more about our passion for mushrooms please do <a href="#contact-us" class="link">get in contact</a>.</p>
   </section>
   <section class="centered-section">
@@ -98,6 +112,7 @@
           <ul class="list list--bullet">
             <li class="list__item">~1 mile from Oxford city centre</li>
             <li class="list__item">minimal food miles</li>
+            <li class="list__item">Oxfords 1st mushroom freight farm</li>
             <li class="list__item">fresh Shiitake and Oyster mushrooms</li>
             <li class="list__item">low carbon footprint</li>
           </ul>
@@ -124,7 +139,7 @@
         <article>
           <ul class="list list--bullet">
             <li class="list__item">re-purposed ex MOD shipping containers</li>
-            <li class="list__item">Oxfords 1st mushroom freight farm</li>
+            <li class="list__item">recycled, biodegradable, compostable packaging</li>
             <li class="list__item">solar panels <span class="side-note">(coming soon)</span></li>
             <li class="list__item">rain water harvesting <span class="side-note">(coming soon)</span></li>
           </ul>
@@ -162,7 +177,7 @@
           </div>
           <div class="location__map">
             <div class="map" id="map">
-              <img src="assets/images/location-map.png" alt="Oxford Mushroom Co. Location map">
+              <img src="assets/images/map.png" alt="Oxford Mushroom Co. Location map">
             </div>
           </div>
         </div>

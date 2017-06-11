@@ -7,7 +7,7 @@ module.exports = (ctx) => ({
       unitPrecision: 5,
       selectorBlackList: [],
       replace: false,
-      mediaQuery: false,
+      mediaQuery: true,
       minPixelValue: 0,
       propWhiteList: [
         'font',

@@ -1,0 +1,7 @@
+{% macro image(img, alt, srcSet, sizes) %}
+  <img src="{{ img }}"
+       srcset="{{ srcSet | join(',') }}"
+       sizes="{{ sizes }}"
+       alt="{{ alt }}"
+  >
+{% endmacro %}

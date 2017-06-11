@@ -3,7 +3,38 @@
 {% block content %}
   <section class="centered-section">
     <div class="hero">
-      <img class="hero__img" src="assets/images/oxford-mushroom-co-shiitake-hero.jpg" alt="Oxford Mushroom Co. - Shiitake mushrooms">
+
+      {{ image(
+        'assets/images/hero/shiitake.jpg',
+        'Oxford Mushroom Co. - Shiitake mushrooms',
+        [
+          'assets/images/hero/shiitake_large.jpg 3000w',
+          'assets/images/hero/shiitake_medium.jpg 2000w',
+          'assets/images/hero/shiitake_small.jpg 1500w'
+          'assets/images/hero/shiitake_micro.jpg 1500w'
+        ],
+        '100vw'
+      ) }}
+
+      <div class="hero__center">
+        <ul class="list list--inline">
+          <li class="list__item">
+            <a rel="external" href="https://www.facebook.com/oxfordmushroomco">
+              {{ icon('facebook-icon', 'facebook', 'icon--large') }}
+            </a>
+          </li>
+          <li class="list__item">
+            <a rel="external" href="https://twitter.com/OxfordMushrooms">
+              {{ icon('twitter-icon', 'twitter', 'icon--large') }}
+            </a>
+          </li>
+          <li class="list__item">
+            <a rel="external" href="https://www.instagram.com/oxfordmushroomco">
+              {{ icon('instagram-icon', 'instagram', 'icon--large') }}
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
   <section class="centered-section">
@@ -19,7 +50,18 @@
     <ul class="grid">
       <li class="info grid__col-1-3">
         <figure class="img">
-          <img class="info__img" src="assets/images/oxford-mushroom-co-oyster.jpg" alt="Oxford Mushroom Co. - Oyster Mushrooms">
+
+          {{ image(
+            'assets/images/info/oyster.jpg',
+            'Oxford Mushroom Co. - Oyster Mushrooms',
+            [
+              'assets/images/info/oyster_large.jpg 2000w',
+              'assets/images/info/oyster_medium.jpg 1500w',
+              'assets/images/info/oyster_small.jpg 600w'
+            ],
+            '(min-width: 37.5em) 33.3vw, 100vw'
+          ) }}
+
         </figure>
         <header class="info__header">
           <h2 class="h2">Exotic organic mushrooms</h2>
@@ -36,7 +78,18 @@
       </li>
       <li class="info grid__col-1-3">
         <figure class="img">
-          <img class="info__img" src="assets/images/oxford-mushroom-co-view-from-farm.jpg" alt="Oxford Mushroom Co. - View of Oxford from the farm">
+
+          {{ image(
+            'assets/images/info/view-from-farm.jpg',
+            'Oxford Mushroom Co. - View of Oxford from the farm',
+            [
+              'assets/images/info/view-from-farm_large.jpg 2000w',
+              'assets/images/info/view-from-farm_medium.jpg 1500w',
+              'assets/images/info/view-from-farm_small.jpg 600w'
+            ],
+            '(min-width: 37.5em) 33.3vw, 100vw'
+          ) }}
+
         </figure>
         <header class="info__header">
           <h2 class="h2">Locally grown, fresh produce</h2>
@@ -52,7 +105,18 @@
       </li>
       <li class="info grid__col-1-3">
         <figure class="img">
-          <img class="info__img" src="assets/images/oxford-mushroom-co-shiitake.jpg" alt="Oxford Mushroom Co. - Shiitake Mushrooms">
+
+          {{ image(
+            'assets/images/info/shiitake-box.jpg',
+            'Oxford Mushroom Co. - Shiitake Mushrooms',
+            [
+              'assets/images/info/shiitake-box_large.jpg 2000w',
+              'assets/images/info/shiitake-box_medium.jpg 1500w',
+              'assets/images/info/shiitake-box_small.jpg 600w'
+            ],
+            '(min-width: 37.5em) 33.3vw, 100vw'
+          ) }}
+
         </figure>
         <header class="info__header">
           <h2 class="h2">Environmentally friendly</h2>
@@ -98,7 +162,7 @@
           </div>
           <div class="location__map">
             <div class="map" id="map">
-              <img src="assets/images/oxford-mushroom-co-location-map.png" alt="Oxford Mushroom Co. Location map">
+              <img src="assets/images/location-map.png" alt="Oxford Mushroom Co. Location map">
             </div>
           </div>
         </div>

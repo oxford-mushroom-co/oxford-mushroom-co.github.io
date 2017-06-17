@@ -4,16 +4,6 @@
 
 .info {}
 
-.info__header {
-  @include media-query(600px) {
-    min-height: 40px;
-  }
-
-  @include old-ie {
-    min-height: 40px;
-  }
-}
-
 .info__img {
   @include media-query(600px) {
     border-radius: 4px;

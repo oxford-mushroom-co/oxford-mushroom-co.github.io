@@ -6,22 +6,22 @@
 .h1 {
   color: $off-black;
   margin-top: $gutter/2;
-  font-size: $font-36;
+  font-size: $font-30;
   line-height: 1.2;
 
   @include media-query(600px) {
-    font-size: $font-48;
+    font-size: $font-36;
     margin-top: $gutter;
   }
 
   @include old-ie {
-    font-size: $font-48;
+    font-size: $font-36;
     margin-top: $gutter;
   }
 }
 
 .h2 {
-  font-size: $font-24;
+  font-size: $font-18;
   line-height: 1.2;
   margin-bottom: $gutter/2;
 }

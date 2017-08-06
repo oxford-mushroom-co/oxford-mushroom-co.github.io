@@ -15,16 +15,22 @@
 }
 
 .location__address {
+  margin-top: $gutter;
+
   @include media-query(1040px) {
+    margin-top: 0;
+    padding-left: $gutter;
     display: table-cell;
     vertical-align: top;
-    width: 25%;
+    width: 30%;
   }
 
   @include old-ie {
+    margin-top: 0;
+    padding-left: $gutter;
     display: table-cell;
     vertical-align: top;
-    width: 25%;
+    width: 30%;
   }
 }
 
@@ -35,14 +41,14 @@
   @include media-query(1040px) {
     display: table-cell;
     vertical-align: top;
-    width: 80%;
+    width: 60%;
     height: 300px;
   }
 
   @include old-ie {
     display: table-cell;
     vertical-align: top;
-    width: 80%;
+    width: 60%;
     height: 300px;
   }
 }

@@ -1,17 +1,29 @@
 @import "../tools/media-query";
 @import "../tools/old-ie";
 @import "../settings/vars";
+@import "../settings/colours";
 
 .contact-title {
   margin-bottom: $gutter/2;
+  font-weight: bold;
+  display: inline-block;
+  min-width: 60px;
+}
 
-  @include media-query(600px) {
-    display: inline-block;
-    min-width: 60px;
-  }
+.contact-link {
+  display: block;
 
-  @include old-ie {
-    display: inline-block;
-    min-width: 60px;
+  &:hover {
+    .facebook-icon {
+      fill: lighten($facebook, 20%);
+    }
+
+    .twitter-icon {
+      fill: lighten($twitter, 10%);
+    }
+
+    .instagram-icon {
+      fill: lighten($black, 40%);
+    }
   }
 }

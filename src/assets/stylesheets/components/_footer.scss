@@ -5,19 +5,14 @@
 
 .footer {
   width: 100%;
-  background-color: $light-grey;
-  color: $dark-grey;
+  border-top: 1px solid $dark-brown;
+  background-color: $brown;
+  color: $off-black;
   font-size: $font-16;
-  padding: $gutter $gutter/2 $gutter*2;
-  margin-top: $gutter*2;
-}
+  padding: 0 $gutter/2 $gutter*2;
+  margin-top: $gutter;
 
-.right-aligned\@large {
-  @include media-query(600px) {
-    text-align: right;
-  }
-
-  @include old-ie {
-    text-align: right;
+  .centered-section {
+    margin-top: $gutter;
   }
 }

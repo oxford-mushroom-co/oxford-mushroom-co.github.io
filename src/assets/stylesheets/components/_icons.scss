@@ -46,19 +46,19 @@
   }
 }
 
-.soil-association-icon {
-  width: 80px;
-  height: 80px;
-  fill: $black;
+.good-food-oxford-icon {
+  width: 70px;
+  height: 140px;
+  fill: $good-food-oxford;
 
   &:hover {
-    fill: lighten($black, 40%);
+    fill: lighten($good-food-oxford, 5%);
   }
 }
 
 .land-workers-alliance-icon {
-  width: 120px;
-  height: 88px;
+  width: 180px;
+  height: 132px;
   fill: $black;
   margin-right: $gutter;
 

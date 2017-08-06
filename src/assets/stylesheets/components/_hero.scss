@@ -1,12 +1,15 @@
 @import "../settings/vars";
+@import "../settings/colours";
 @import "../tools/media-query";
 @import "../tools/old-ie";
 
 .hero {
+  margin-top: $gutter;
   margin-bottom: $gutter;
 
-  @include media-query($content-max-width) {
+  @include media-query(1024px) {
     position: relative;
+    height: 100%;
   }
 
   @include old-ie {
@@ -14,41 +17,27 @@
   }
 }
 
-.hero__img {
-  max-height: 800px;
+.hero__logo {
+  padding: $gutter 0;
+  margin: 0 auto;
 
-  @include media-query(600px) {
-    border-radius: 4px;
-    margin: $gutter/2 auto 0;
+  @include media-query(1024px) {
+    width: 65%;
   }
 
   @include old-ie {
-    border-radius: 4px;
-    margin-top: $gutter/2;
-    max-height: 1000px;
+    width: 65%;
   }
 }
 
-.hero__center {
-  display: none;
+.hero__action-bar {
+  text-align: right;
 
-  @include media-query($content-max-width) {
-    text-align: right;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: block;
+  @include media-query(1024px) {
+    text-align: left;
   }
 
   @include old-ie {
-    text-align: right;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: block;
+    text-align: left;
   }
 }

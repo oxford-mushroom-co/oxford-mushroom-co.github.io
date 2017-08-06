@@ -3,15 +3,15 @@
 @import "../tools/old-ie";
 
 .centered-section {
-  margin: $gutter/2;
+  margin: $gutter;
   max-width: $content-max-width;
 
   @include media-query($content-max-width) {
-    margin: 0 auto;
+    margin: $gutter*2 auto;
   }
 
   @include old-ie {
-    margin: 0 auto;
+    margin: $gutter*2 auto;
     width: $content-max-width;
   }
 }

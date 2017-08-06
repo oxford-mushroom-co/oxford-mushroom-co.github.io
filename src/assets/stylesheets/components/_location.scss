@@ -3,6 +3,8 @@
 @import "../tools/old-ie";
 
 .location {
+  overflow: hidden;
+  
   @include media-query(1040px) {
     display: table;
     width: 100%;

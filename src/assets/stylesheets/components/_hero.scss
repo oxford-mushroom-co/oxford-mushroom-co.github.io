@@ -4,8 +4,11 @@
 @import "../tools/old-ie";
 
 .hero {
-  margin-top: $gutter;
+  padding: $gutter;
   margin-bottom: $gutter;
+  background-image: url('/assets/images/info/view-from-farm_wide.jpg');
+  background-size: cover;
+  border-bottom: 1px solid $dark-brown;
 
   @include media-query(1024px) {
     position: relative;
@@ -14,6 +17,7 @@
 
   @include old-ie {
     position: relative;
+    background: no-repeat 0 0 url('/assets/images/info/view-from-farm_wide.jpg');
   }
 }
 

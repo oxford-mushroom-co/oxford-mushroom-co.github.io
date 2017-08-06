@@ -19,8 +19,9 @@
 {% endblock %}
 
 {% block content %}
-  <section class="centered-section">
-    <div class="hero">
+
+  <section class="hero">
+    <div class="centered-section centered-section--compact">
       <div class="hero__action-bar">
         <ul class="list list--inline">
           <li class="list__item">
@@ -44,6 +45,7 @@
       <img class="hero__logo show-old-ie" src="assets/images/oxfordmushroom-company.png" alt="The Oxford Mushroom Co.">
     </div>
   </section>
+
   <section class="centered-section">
     <p>We are Lee and Rajo, two life-long Oxfordshire residents running a small-scale mushroom farm located in South Oxford.</p>
     <p>We are ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh produce that is pesticide free and with minimal food miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us Oxfords first mushroom freight farm!</p>
@@ -51,7 +53,7 @@
   <section class="centered-section">
     <h2 class="h2" id="about-us">About us</h2>
     <ul class="grid">
-      <li class="info grid__col-1-3">
+      <li class="grid__col-1-3">
         <figure class="img">
 
           {{ image(
@@ -79,16 +81,16 @@
           </ul>
         </article>
       </li>
-      <li class="info grid__col-1-3">
+      <li class="grid__col-1-3">
         <figure class="img">
 
           {{ image(
-            'assets/images/info/view-from-farm.jpg',
-            'Oxford Mushroom Co. - View of Oxford from the farm',
+            'assets/images/info/shiitake-box.jpg',
+            'Oxford Mushroom Co. - Shiitake Mushrooms',
             [
-              'assets/images/info/view-from-farm_large.jpg 2000w',
-              'assets/images/info/view-from-farm_medium.jpg 1500w',
-              'assets/images/info/view-from-farm_small.jpg 600w'
+              'assets/images/info/shiitake-box_large.jpg 2000w',
+              'assets/images/info/shiitake-box_medium.jpg 1500w',
+              'assets/images/info/shiitake-box_small.jpg 600w'
             ],
             '(min-width: 37.5em) 33.3vw, 100vw'
           ) }}
@@ -107,18 +109,19 @@
           </ul>
         </article>
       </li>
-      <li class="info grid__col-1-3">
+      <li class="grid__col-1-3">
         <figure class="img">
 
           {{ image(
-            'assets/images/info/shiitake-box.jpg',
-            'Oxford Mushroom Co. - Shiitake Mushrooms',
+            'assets/images/hero/shiitake.jpg',
+            'Oxford Mushroom Co. - Shiitake mushrooms',
             [
-              'assets/images/info/shiitake-box_large.jpg 2000w',
-              'assets/images/info/shiitake-box_medium.jpg 1500w',
-              'assets/images/info/shiitake-box_small.jpg 600w'
+              'assets/images/hero/shiitake_large.jpg 3000w',
+              'assets/images/hero/shiitake_medium.jpg 2000w',
+              'assets/images/hero/shiitake_small.jpg 1500w',
+              'assets/images/hero/shiitake_micro.jpg 1000w'
             ],
-            '(min-width: 37.5em) 33.3vw, 100vw'
+            '100vw'
           ) }}
 
         </figure>
@@ -135,23 +138,6 @@
         </article>
       </li>
     </ul>
-  </section>
-  <section class="centered-section">
-    <h2 class="h2" id="our-produce">Gallery</h2>
-    <p>Our produce, delicious Shiitake mushrooms.</p>
-
-    {{ image(
-      'assets/images/hero/shiitake.jpg',
-      'Oxford Mushroom Co. - Shiitake mushrooms',
-      [
-        'assets/images/hero/shiitake_large.jpg 3000w',
-        'assets/images/hero/shiitake_medium.jpg 2000w',
-        'assets/images/hero/shiitake_small.jpg 1500w',
-        'assets/images/hero/shiitake_micro.jpg 1000w'
-      ],
-      '100vw'
-    ) }}
-
   </section>
   <section class="centered-section">
     <div class="divider"></div>
@@ -191,7 +177,7 @@
             <div class="is-visually-hidden">facebook:</div>
             <a class="contact-link" rel="external" href="https://www.facebook.com/oxfordmushroomco">
               <div class="contact-title">
-                {{ icon('facebook-icon', 'facebook', 'icon--large') }}
+                {{ icon('facebook-icon', 'facebook:', 'icon--large') }}
               </div>
               facebook
             </a>
@@ -200,7 +186,7 @@
             <div class="is-visually-hidden">twitter:</div>
             <a class="contact-link" rel="external" href="https://twitter.com/OxfordMushrooms">
               <div class="contact-title">
-                {{ icon('twitter-icon', 'twitter', 'icon--large') }}
+                {{ icon('twitter-icon', 'twitter:', 'icon--large') }}
               </div>
               twitter
             </a>
@@ -209,7 +195,7 @@
             <div class="is-visually-hidden">instagram:</div>
             <a class="contact-link" rel="external" href="https://www.instagram.com/oxfordmushroomco">
               <div class="contact-title">
-                {{ icon('instagram-icon', 'instagram', 'icon--large') }}
+                {{ icon('instagram-icon', 'instagram:', 'icon--large') }}
               </div>
               instagram
             </a>

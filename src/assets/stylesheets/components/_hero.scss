@@ -5,6 +5,8 @@
 
 .hero {
   padding: $gutter;
+  border-bottom: 1px solid $dark-brown;
+  background-color: $brown;
 
   @include media-query(1024px) {
     position: relative;

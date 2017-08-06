@@ -4,56 +4,22 @@
 
 // TODO have a look over the way this is being done in here
 
+
 .location {
   overflow: hidden;
-
-  @include media-query(1040px) {
-    display: table;
-    width: 100%;
-  }
-
-  @include old-ie {
-    display: table;
-    width: 100%;
-  }
 }
 
 .location__address {
   margin-top: $gutter;
 
-  @include media-query(1040px) {
+  @include media-query(600px) {
     margin-top: 0;
-    padding-left: $gutter;
-    display: table-cell;
-    vertical-align: top;
-    width: 30%;
-  }
-
-  @include old-ie {
-    margin-top: 0;
-    padding-left: $gutter;
-    display: table-cell;
-    vertical-align: top;
-    width: 30%;
+    margin-left: $gutter;
   }
 }
 
 .location__map {
   position: relative;
   min-height: 260px;
-
-  @include media-query(1040px) {
-    display: table-cell;
-    vertical-align: top;
-    width: 60%;
-    height: 300px;
-  }
-
-  @include old-ie {
-    display: table-cell;
-    vertical-align: top;
-    width: 60%;
-    height: 300px;
-  }
 }
 

@@ -5,9 +5,6 @@
 
 .hero {
   padding: $gutter;
-  margin-bottom: $gutter;
-  background-image: url('../images/info/view-from-farm_wide.jpg');
-  background-size: cover;
 
   @include media-query(1024px) {
     position: relative;
@@ -16,7 +13,6 @@
 
   @include old-ie {
     position: relative;
-    background: no-repeat 0 0 url('../images/info/view-from-farm_wide.jpg');
   }
 }
 

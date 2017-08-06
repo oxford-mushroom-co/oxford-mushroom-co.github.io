@@ -2,9 +2,11 @@
 @import "../tools/media-query";
 @import "../tools/old-ie";
 
+// TODO have a look over the way this is being done in here
+
 .location {
   overflow: hidden;
-  
+
   @include media-query(1040px) {
     display: table;
     width: 100%;

@@ -6,7 +6,7 @@
 .hero {
   padding: $gutter;
   margin-bottom: $gutter;
-  background-image: url('/assets/images/info/view-from-farm_wide.jpg');
+  background-image: url('../../images/info/view-from-farm_wide.jpg');
   background-size: cover;
   border-bottom: 1px solid $dark-brown;
 
@@ -17,7 +17,7 @@
 
   @include old-ie {
     position: relative;
-    background: no-repeat 0 0 url('/assets/images/info/view-from-farm_wide.jpg');
+    background: no-repeat 0 0 url('../../images/info/view-from-farm_wide.jpg');
   }
 }
 

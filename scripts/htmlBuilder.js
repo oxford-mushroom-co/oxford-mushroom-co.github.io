@@ -8,7 +8,7 @@ const env = nunjucks.configure(`${__dirname}/../src/`, {
 nunjucksGlobals(env)
 
 const htmlFilesToRender = new Promise((resolve, reject) => {
-  fs.readdir('src/views/', (err, files) => {
+  fs.readdir('src/templates/views/', (err, files) => {
     if (err) {
       reject(err)
     }
@@ -22,7 +22,7 @@ htmlFilesToRender
     return fileNames.map((fileName) => {
       return {
         fileName: `${fileName.split('.')[0]}.html`,
-        html: nunjucks.render(`views/${fileName}`)
+        html: nunjucks.render(`templates/views/${fileName}`)
       }
     })
   })

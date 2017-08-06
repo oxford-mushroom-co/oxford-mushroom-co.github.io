@@ -4,8 +4,8 @@
 {% block twitter %}
   {{ twitterCard(
     'The Oxford Mushroom Co.',
-    'We are the Oxford Mushroom Company, ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh, organic produce with minimal food miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us Oxfords first mushroom freight farm!',
-    'https://feedmypixel.github.io/oxford-mushroom-co/assets/images/hero/shiitake_large.jpg'
+    'We are Lee and Rajo, two life-long Oxfordshire residents running a small-scale mushroom farm located in South Oxford. Ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms.',
+    'https://feedmypixel.github.io/oxford-mushroom-co/assets/images/oxfordmushroom-company-logo.png'
   ) }}
 {% endblock %}
 
@@ -13,28 +13,15 @@
   {{ facebookOpenGraph(
     'https://feedmypixel.github.io/oxford-mushroom-co/',
     'The Oxford Mushroom Co.',
-    'We are the Oxford Mushroom Company, ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh, organic produce with minimal food miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us Oxfords first mushroom freight farm!',
-  'https://feedmypixel.github.io/oxford-mushroom-co/assets/images/hero/shiitake_large.jpg'
+    'We are Lee and Rajo, two life-long Oxfordshire residents running a small-scale mushroom farm located in South Oxford. Ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms.',
+  'https://feedmypixel.github.io/oxford-mushroom-co/assets/images/oxfordmushroom-company-logo.png'
   ) }}
 {% endblock %}
 
 {% block content %}
   <section class="centered-section">
     <div class="hero">
-
-      {{ image(
-        'assets/images/hero/shiitake.jpg',
-        'Oxford Mushroom Co. - Shiitake mushrooms',
-        [
-          'assets/images/hero/shiitake_large.jpg 3000w',
-          'assets/images/hero/shiitake_medium.jpg 2000w',
-          'assets/images/hero/shiitake_small.jpg 1500w',
-          'assets/images/hero/shiitake_micro.jpg 1000w'
-        ],
-        '100vw'
-      ) }}
-
-      <div class="hero__center">
+      <div class="hero__action-bar">
         <ul class="list list--inline">
           <li class="list__item">
             <a rel="external" href="https://www.facebook.com/oxfordmushroomco">
@@ -53,16 +40,16 @@
           </li>
         </ul>
       </div>
+      <img class="hero__logo hide-old-ie" src="assets/images/oxfordmushroom-company.svg" alt="The Oxford Mushroom Co.">
+      <img class="hero__logo show-old-ie" src="assets/images/oxfordmushroom-company.png" alt="The Oxford Mushroom Co.">
     </div>
   </section>
   <section class="centered-section">
-    <p>We are Lee and Rajo, two passionate locals running a small-scale organic mushroom farm located in
-      South Oxford.</p>
-    <p>We are ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh, organic produce with minimal food miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us Oxfords first mushroom freight farm!</p>
-    <p>If you would like to know how we can supply delicious mushrooms to you or your business or would like to find out more about our passion for mushrooms please do <a href="#contact-us" class="link">get in contact</a>.</p>
+    <p>We are Lee and Rajo, two life-long Oxfordshire residents running a small-scale mushroom farm located in South Oxford.</p>
+    <p>We are ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh produce that is pesticide free and with minimal food miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us Oxfords first mushroom freight farm!</p>
   </section>
   <section class="centered-section">
-    <div class="divider"></div>
+    <h2 class="h2" id="about-us">About us</h2>
     <ul class="grid">
       <li class="info grid__col-1-3">
         <figure class="img">
@@ -80,7 +67,7 @@
 
         </figure>
         <header>
-          <h2 class="h2">Exotic organic mushrooms</h2>
+          <h3 class="h3">Exotic mushrooms</h3>
         </header>
         <article>
           <ul class="list list--bullet">
@@ -88,7 +75,7 @@
             <li class="list__item">great flavour</li>
             <li class="list__item">nutritional value</li>
             <li class="list__item">medicinal healing properties</li>
-            <li class="list__item">grown on organic oak sawdust</li>
+            <li class="list__item">grown on sustainably sourced oak sawdust</li>
           </ul>
         </article>
       </li>
@@ -108,7 +95,7 @@
 
         </figure>
         <header>
-          <h2 class="h2">Locally grown, fresh produce</h2>
+          <h3 class="h3">Locally grown, fresh produce</h3>
         </header>
         <article>
           <ul class="list list--bullet">
@@ -136,7 +123,7 @@
 
         </figure>
         <header>
-          <h2 class="h2">Environmentally friendly</h2>
+          <h3 class="h3">Environmentally friendly</h3>
         </header>
         <article>
           <ul class="list list--bullet">
@@ -150,39 +137,84 @@
     </ul>
   </section>
   <section class="centered-section">
+    <h2 class="h2" id="our-produce">Gallery</h2>
+    <p>Our produce, delicious Shiitake mushrooms.</p>
+
+    {{ image(
+      'assets/images/hero/shiitake.jpg',
+      'Oxford Mushroom Co. - Shiitake mushrooms',
+      [
+        'assets/images/hero/shiitake_large.jpg 3000w',
+        'assets/images/hero/shiitake_medium.jpg 2000w',
+        'assets/images/hero/shiitake_small.jpg 1500w',
+        'assets/images/hero/shiitake_micro.jpg 1000w'
+      ],
+      '100vw'
+    ) }}
+
+  </section>
+  <section class="centered-section">
     <div class="divider"></div>
     <h2 class="h2" id="contact-us">Contact us</h2>
+    <p>If you would like to know how we can supply delicious mushrooms to you or your business or would like to find out more about our passion for mushrooms please do get in contact.</p>
     <div class="grid">
-      <div class="grid__col-1-3">
-        <ul class="list">
-          <li class="list__item">
-            <div class="contact-title">email:</div>
-            <a href="mailto:lee&#64;oxfordmushroomco.com" class="link">lee&#64;oxfordmushroomco.com</a>
-          </li>
-          <li class="list__item">
-            <div class="contact-title">phone:</div>
-            <a href="tel:07505884986" class="link">07505 884986</a>
-          </li>
-        </ul>
-      </div>
       <div class="grid__col-2-3">
         <div class="location">
+          <div class="location__map">
+            <div class="map" id="map">
+              <img src="assets/images/map.png" alt="Oxford Mushroom Co. Location map">
+            </div>
+          </div>
           <div class="location__address">
-            <div class="contact-title">address:</div>
+            <div class="contact-title">Address:</div>
             <ul class="list">
-              <li class="list__item">The Barn,</li>
+              <li class="list__item">Oxford Mushroom Co.</li>
               <li class="list__item">Hinksey Heights,</li>
               <li class="list__item">South Hinksey,</li>
               <li class="list__item">Oxford,</li>
               <li class="list__item">OX1 5AB.</li>
             </ul>
           </div>
-          <div class="location__map">
-            <div class="map" id="map">
-              <img src="assets/images/map.png" alt="Oxford Mushroom Co. Location map">
-            </div>
-          </div>
         </div>
+      </div>
+      <div class="grid__col-1-3">
+        <ul class="list">
+          <li class="list__item">
+            <div class="contact-title">Email:</div>
+            <a href="mailto:lee&#64;oxfordmushroomco.com" class="link">lee&#64;oxfordmushroomco.com</a>
+          </li>
+          <li class="list__item">
+            <div class="contact-title">Phone:</div>
+            <a href="tel:07505884986" class="link">07505 884986</a>
+          </li>
+          <li class="list__item">
+            <div class="is-visually-hidden">facebook:</div>
+            <a class="contact-link" rel="external" href="https://www.facebook.com/oxfordmushroomco">
+              <div class="contact-title">
+                {{ icon('facebook-icon', 'facebook', 'icon--large') }}
+              </div>
+              facebook
+            </a>
+          </li>
+          <li class="list__item">
+            <div class="is-visually-hidden">twitter:</div>
+            <a class="contact-link" rel="external" href="https://twitter.com/OxfordMushrooms">
+              <div class="contact-title">
+                {{ icon('twitter-icon', 'twitter', 'icon--large') }}
+              </div>
+              twitter
+            </a>
+          </li>
+          <li class="list__item">
+            <div class="is-visually-hidden">instagram:</div>
+            <a class="contact-link" rel="external" href="https://www.instagram.com/oxfordmushroomco">
+              <div class="contact-title">
+                {{ icon('instagram-icon', 'instagram', 'icon--large') }}
+              </div>
+              instagram
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>

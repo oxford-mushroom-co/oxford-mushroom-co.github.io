@@ -14,7 +14,7 @@ const renderMap = () => {
 
   const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'mapbox://styles/mapbox/basic-v9',
     center: farmLongLat,
     zoom: 12,
     trackResize: true,

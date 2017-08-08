@@ -16,6 +16,11 @@
     margin-top: 0;
     margin-left: $gutter;
   }
+
+  @include old-ie {
+    margin-top: 0;
+    margin-left: $gutter;
+  }
 }
 
 .location__map {

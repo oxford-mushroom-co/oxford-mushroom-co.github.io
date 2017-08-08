@@ -56,12 +56,10 @@
 
 .grid > [class*="grid__col-"] {
   @include media-query(600px) {
-    padding-left: $gutter/3;
-    padding-right: $gutter/3;
+    padding-right: $gutter;
   }
 
   @include old-ie {
-    padding-left: $gutter/3;
-    padding-right: $gutter/3;
+    padding-right: $gutter;
   }
 }

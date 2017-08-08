@@ -5,12 +5,10 @@
 
 .hero {
   padding: $gutter;
-  border-bottom: 1px solid $dark-brown;
   background-color: $brown;
 
   @include media-query(1024px) {
     position: relative;
-    height: 100%;
   }
 
   @include old-ie {
@@ -19,15 +17,16 @@
 }
 
 .hero__logo {
-  padding: $gutter 0;
   margin: 0 auto;
+  padding: $gutter;
+  max-height: 500px;
 
   @include media-query(1024px) {
-    width: 65%;
+    width: 30%;
   }
 
   @include old-ie {
-    width: 65%;
+    width: 30%;
   }
 }
 

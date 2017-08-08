@@ -61,6 +61,10 @@ ul {
 
 p {
   font-size: $font-16;
+
+  @include media-query(1040px) {
+    font-size: $font-18;
+  }
 }
 
 img {

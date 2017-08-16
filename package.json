@@ -22,7 +22,8 @@
     "watch": "npm run watch:html & npm run watch:images & npm run watch:css & npm run watch:js",
     "hash:assets": "scripts/hash-assets.sh",
     "hash:images": "scripts/hash-images.sh",
-    "integrity:assets": "scripts/integrity-assets.sh"
+    "integrity:assets": "scripts/integrity-assets.sh",
+    "deploy": "scripts/deploy.sh"
   },
   "author": "feedMyPixel",
   "contributors": "Ben Chidgey <ben@feedmypixel.com>",

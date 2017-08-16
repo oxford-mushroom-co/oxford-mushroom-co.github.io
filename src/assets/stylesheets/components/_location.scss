@@ -2,29 +2,62 @@
 @import "../tools/media-query";
 @import "../tools/old-ie";
 
-// TODO have a look over the way this is being done in here
-
-
 .location {
   overflow: hidden;
+
+  @include media-query(900px) {
+    display: table;
+    width: 100%;
+  }
+
+  @include old-ie {
+    display: table;
+    width: 100%;
+  }
+}
+
+.location__social {
+  @include media-query(900px) {
+    display: table-cell;
+    width: 25%;
+    padding-right: $gutter;
+  }
+
+  @include old-ie {
+    display: table-cell;
+    width: 25%;
+    padding-right: $gutter;
+  }
+}
+
+.location__map {
+  margin-top: $gutter;
+  position: relative;
+  min-height: 260px;
+
+  @include media-query(900px) {
+    display: table-cell;
+    width: 50%;
+  }
+
+  @include old-ie {
+    display: table-cell;
+    width: 50%;
+  }
 }
 
 .location__address {
   margin-top: $gutter;
 
-  @include media-query(600px) {
-    margin-top: 0;
-    margin-left: $gutter;
+  @include media-query(900px) {
+    display: table-cell;
+    width: 25%;
+    padding-left: $gutter;
   }
 
   @include old-ie {
-    margin-top: 0;
-    margin-left: $gutter;
+    display: table-cell;
+    width: 25%;
+    padding-left: $gutter;
   }
 }
-
-.location__map {
-  position: relative;
-  min-height: 260px;
-}
-

@@ -16,3 +16,27 @@
     margin-top: $gutter;
   }
 }
+
+.footer__primary {
+  @include media-query(900px) {
+    float: left
+  }
+
+  @include old-ie {
+    float: left
+  }
+}
+
+.footer__secondary {
+  margin-top: $gutter;
+
+  @include media-query(900px) {
+    margin-top: 0;
+    float: right
+  }
+
+  @include old-ie {
+    margin-top: 0;
+    float: right
+  }
+}

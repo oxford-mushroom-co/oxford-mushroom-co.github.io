@@ -4,6 +4,7 @@ A site for the Oxford Mushroom Co. A static html site built via nunjucks.
 ## Table of Contents
 - [Requirements](#requirements)
 - [Setup](#setup)
+- [Development](#development)
 - [Npm Scripts](#npm-scripts)
 - [License](#license)
 
@@ -19,6 +20,10 @@ Install npm dependencies:
 ```bash
 $ npm i
 ```
+
+### Development
+All development is done on the `develop` branch and static assets and markup are pushed to the `master` branch
+to deploy.
 
 ### Npm Scripts
 

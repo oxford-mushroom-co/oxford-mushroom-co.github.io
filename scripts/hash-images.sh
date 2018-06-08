@@ -50,5 +50,5 @@ function createHash {
 }
 
 set -o errexit
-echo "---- Hashing Images and updating HTML, CSS and JavaScript"
+echo "---- Hashing Images and updating HTML and CSS"
 hashImages "${IMAGES[@]}"

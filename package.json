@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Website for the Oxford Mushroom Company",
   "scripts": {
-    "clean:dist": "rm -rf dist && mkdir -p dist/assets/{images,stylesheets,javascripts}",
+    "clean:dist": "rm -rf dist && mkdir -p dist/assets/{images,stylesheets}",
     "build": "scripts/build.sh",
     "build:css": "node-sass src/assets/stylesheets/ -o dist/assets/stylesheets/ --output-style compressed",
     "postbuild:css": "postcss dist/assets/stylesheets/*.css -d dist/assets/stylesheets/ --parser sugarss",

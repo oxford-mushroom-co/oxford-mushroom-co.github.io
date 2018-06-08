@@ -49,4 +49,3 @@ function createHash {
 set -o errexit
 echo "---- Hashing Public assets"
 hashAssets "${STYLESHEETS[@]}"
-hashAssets "${JAVASCRIPTS[@]}"

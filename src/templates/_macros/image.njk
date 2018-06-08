@@ -1,7 +1,11 @@
-{% macro image(img, alt, srcSet, sizes) %}
-  <img src="{{ img }}"
-       srcset="{{ srcSet | join(',') }}"
-       sizes="{{ sizes }}"
-       alt="{{ alt }}"
+{% macro Image(props) %}
+  {% set srcSet = props.srcSet | default('[]') | join(',') %}
+  {% set className = props.className %}
+
+  <img src="{{ props.src }}"
+       {% if className %} class="{{ className }}" {% endif %}
+       srcset="{{ srcSet }}"
+       sizes="{{ props.sizes }}"
+       alt="{{ props.alt }}"
   >
 {% endmacro %}

@@ -1,0 +1,10 @@
+{% from "templates/_macros/image.njk" import Image %}
+
+{% macro FigureImage(props) %}
+  <figure class="img">
+    {{ Image(props) }}
+    <figcaption class="img__caption">
+      {{ props.caption | safe }}
+    </figcaption>
+  </figure>
+{% endmacro %}

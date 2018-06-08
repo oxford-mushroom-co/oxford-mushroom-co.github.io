@@ -1,10 +1,10 @@
-{% macro icon(id, fallbackText, classes) %}
-  <span class="icon-wrapper">
-      {%- if fallbackText %}
-        <span class="show-old-ie">{{ fallbackText }}</span>
-      {% endif -%}
-    <svg class="icon {{ id }} {{ classes }} hide-old-ie">
-      <use xlink:href="#{{ id }}"></use>
-    </svg>
-  </span>
+{% macro Icon(props) %}
+  {% set className = ['icon', props.id, 'hide-old-ie'] | concat(props.className) | join(' ') %}
+
+  {%- if fallbackText %}
+    <span class="show-old-ie">{{ props.fallbackText }}</span>
+  {% endif -%}
+  <svg class="{{ className }}">
+    <use xlink:href="#{{ props.id }}"></use>
+  </svg>
 {% endmacro %}

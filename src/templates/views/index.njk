@@ -1,213 +1,566 @@
 {% extends "templates/_layout/base.njk" %}
 
 {% block twitter %}
-  {{ twitterCard(
-    'Oxford Mushroom Co.',
-    'We are Lee and Rajo, two life-long Oxfordshire residents running a small-scale mushroom farm located in South Oxford. Ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh produce that is pesticide free and with minimal food
+  {{ TwitterCard({
+    title: 'Oxford Mushroom Co.',
+    description: 'We are Lee and Rajo, two life-long Oxfordshire residents running a small-scale mushroom farm located in South Oxford. Ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh produce that is pesticide free and with minimal food
       miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us
       Oxfords first mushroom freight farm!',
-    'http://oxfordmushroomco.com/assets/images/oxfordmushroomco-logo.png'
-  ) }}
+    image: 'http://oxfordmushroomco.com/assets/images/logo/oxfordmushroomco.png'
+  }) }}
 {% endblock %}
 
 {% block facebook %}
-  {{ facebookOpenGraph(
-    'http://oxfordmushroomco.com',
-    'Oxford Mushroom Co.',
-    'We are Lee and Rajo, two life-long Oxfordshire residents running a small-scale mushroom farm located in South Oxford. Ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh produce that is pesticide free and with minimal food
+  {{ FacebookOpenGraph({
+    url: 'http://oxfordmushroomco.com',
+    title: 'Oxford Mushroom Co.',
+    description: 'We are Lee and Rajo, two life-long Oxfordshire residents running a small-scale mushroom farm located in South Oxford. Ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms. Maintaining a low carbon foot print and providing fresh produce that is pesticide free and with minimal food
       miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us
       Oxfords first mushroom freight farm!',
-  'http://oxfordmushroomco.com/assets/images/oxfordmushroomco-logo.png'
-  ) }}
+    image: 'http://oxfordmushroomco.com/assets/images/logo/oxfordmushroomco.png'
+  }) }}
 {% endblock %}
 
 {% block content %}
-
   <section class="hero">
-    <div class="centered-section centered-section--compact">
-      <div class="hero__action-bar">
-        <ul class="list list--inline">
-          <li class="list__item">
-            <a rel="external" href="https://www.facebook.com/oxfordmushroomco">
-              {{ icon('facebook-icon', 'facebook', 'icon--large') }}
-            </a>
-          </li>
-          <li class="list__item">
-            <a rel="external" href="https://twitter.com/OxfordMushrooms">
-              {{ icon('twitter-icon', 'twitter', 'icon--large') }}
-            </a>
-          </li>
-          <li class="list__item">
-            <a rel="external" href="https://www.instagram.com/oxfordmushroomco">
-              {{ icon('instagram-icon', 'instagram', 'icon--large') }}
-            </a>
-          </li>
-        </ul>
+    <a href="#content" class="skip-link is-visually-hidden">Skip to main content</a> {# TODO make sure this is working correctly with screenreader #}
+    <div class="hero__social-bar">
+      <ul class="list list--inline">
+        <li class="list__item">
+          <a rel="external" href="https://www.instagram.com/oxfordmushroomco">
+            {{ Icon({
+              id: 'instagram-icon',
+              fallbackText: 'instagram'
+            }) }}
+          </a>
+        </li>
+        <li class="list__item">
+          <a rel="external" href="https://www.facebook.com/oxfordmushroomco">
+            {{ Icon({
+              id: 'facebook-icon',
+              fallbackText: 'facebook'
+            }) }}
+          </a>
+        </li>
+        <li class="list__item">
+          <a rel="external" href="https://twitter.com/OxfordMushrooms">
+            {{ Icon({
+              id: 'twitter-icon',
+              fallbackText: 'twitter'
+            }) }}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <img class="hero__logo hide-old-ie" src="assets/images/logo/oxfordmushroomco.svg" alt="The Oxford Mushroom Co.">
+    <img class="hero__logo show-old-ie" src="assets/images/logo/oxfordmushroomco-transparent.png" alt="The Oxford Mushroom Co.">
+
+    {{ Image({
+      src: 'assets/images/hero/blue-oyster-mushrooms-640.jpg',
+      className: 'hero__img',
+      alt: 'Oxford Mushroom Co. - Blue Oyster Mushrooms',
+      srcSet: [
+        'assets/images/hero/blue-oyster-mushrooms-2048.jpg 2048w',
+        'assets/images/hero/blue-oyster-mushrooms-1920.jpg 1920w',
+        'assets/images/hero/blue-oyster-mushrooms-1680.jpg 1680w',
+        'assets/images/hero/blue-oyster-mushrooms-1440.jpg 1440w',
+        'assets/images/hero/blue-oyster-mushrooms-1280.jpg 1280w',
+        'assets/images/hero/blue-oyster-mushrooms-1024.jpg 1024w',
+        'assets/images/hero/blue-oyster-mushrooms-640.jpg 640w'
+      ],
+      sizes: '100vw'
+    }) }}
+  </section>
+
+  <section id="content" class="centered-section">
+    <div class="grid-about">
+      <div class="grid-about__text-one">
+        <h1 class="h1" id="hello">Fresh, local, mushrooms</h1>
+        <p>
+          Hello and welcome to the Oxford Mushroom co. We are Lee and Rajo, two life-long Oxfordshire residents who run a small-scale mushroom farm located in
+          South Oxford. We are ideally placed to supply the surrounding community and its fine eateries with locally grown mushrooms.
+        </p>
       </div>
-      <img class="hero__logo hide-old-ie" src="assets/images/oxfordmushroomco-logo.svg" alt="The Oxford Mushroom Co.">
-      <img class="hero__logo show-old-ie" src="assets/images/oxfordmushroomco-logo-transparent.png" alt="The Oxford Mushroom Co.">
+
+      <div class="grid-about__img-one">
+        {{ FigureImage({
+          src: 'assets/images/lee.jpg',
+          alt: '',
+          srcSet: [],
+          sizes: '(min-width: 37.5em) 33.3vw, 100vw',
+          caption: 'Lee delivering our produce to Peter <a href="https://www.instagram.com/2northparade/">@2NorthParade</a>'
+        }) }}
+      </div>
+
+      <div class="grid-about__text-two">
+        <p>
+          You can find us every Saturday at the <a href="https://www.eastoxfordmarket.org.uk/">East Oxford Farmers
+            Market</a>.<br>
+          Our mushrooms are also available at various fine food establishments in and around Oxford. You can find them
+          at
+          <a href="http://www.2northparade.com/">2 North parade</a>, <a href="https://www.organicwholefoods.co.uk/">Organic whole foods</a> and
+          <a href="http://www.themarketgarden.co.uk/">The market garden greengrocers and wholefoods</a>.
+        </p>
+      </div>
+
+      <div class="grid-about__img-two">
+        {{ FigureImage({
+          src: 'assets/images/rajo.jpg',
+          alt: '',
+          srcSet: [],
+          sizes: '(min-width: 37.5em) 33.3vw, 100vw',
+          caption: 'Rajo at our stall on the <a href="https://www.eastoxfordmarket.org.uk/">The East Oxford Farmers & Community Market</a>'
+        }) }}
+      </div>
+
+      <div class="grid-about__text-three">
+        <p>
+          If you wish to eat out you you can find our mushrooms lovingly prepared at <a href="http://www.olisthai.com/">Olis
+            Thai</a>
+          restaurant and at <a href="https://smokeandthyme.com/">Smoke and Tyme</a>.
+        </p>
+        <p>
+          Or if you would prefer to learn how to cook with our Mushrooms you can go and visit our friends at the <a
+            href="https://www.jerichokitchen.co.uk/">Jericho
+            kitchen cookery school.</a>
+        </p>
+        <p>
+          Feel free to come along and say hello wherever you may find us, and we can provide you with our delicious
+          mushrooms.
+        </p>
+      </div>
+
     </div>
   </section>
 
   <section class="centered-section">
-    <p>We are Lee and Rajo, two life-long Oxfordshire residents running a small-scale mushroom farm located in South
-      Oxford.</p>
-    <p>We are ideally placed to supply the surrounding community and fine eateries with locally grown mushrooms.
-      Maintaining a low carbon foot print and providing fresh produce that is pesticide free and with minimal food
-      miles. Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making us
-      Oxfords first mushroom freight farm!</p>
+    {{ Image({
+      src: 'assets/images/mushrooms.jpg',
+      className: 'divider-image',
+      alt: '',
+      srcSet: [],
+      sizes: '(min-width: 37.5em) 33.3vw, 100vw'
+    }) }}
   </section>
-  <section class="centered-section">
-    <h2 class="h2" id="about-us">About us</h2>
-    <ul class="grid">
-      <li class="grid__col-1-3">
-        <figure class="img">
 
-          {{ image(
-            'assets/images/info/oyster.jpg',
-            'Oxford Mushroom Co. - Oyster Mushrooms',
-            [
-              'assets/images/info/oyster_large.jpg 2000w',
-              'assets/images/info/oyster_medium.jpg 1500w',
-              'assets/images/info/oyster_small.jpg 600w'
-            ],
-            '(min-width: 37.5em) 33.3vw, 100vw'
-          ) }}
+  <section class="section-highlight">
+    <div class="centered-section">
+      <div class="grid-gallery">
 
-        </figure>
-        <header>
-          <h3 class="h3">Exotic mushrooms</h3>
-        </header>
-        <article>
-          <ul class="list list--bullet">
-            <li class="list__item">Shiitake and Oyster</li>
-            <li class="list__item">great flavour</li>
-            <li class="list__item">nutritional value</li>
-            <li class="list__item">medicinal healing properties</li>
-            <li class="list__item">grown on sustainably sourced oak sawdust</li>
-          </ul>
-        </article>
-      </li>
-      <li class="grid__col-1-3">
-        <figure class="img">
-          {{ image(
-            'assets/images/info/view-from-farm.jpg',
-            'Oxford Mushroom Co. - View of Oxford from the farm',
-            [
-              'assets/images/info/view-from-farm_large.jpg 2000w',
-              'assets/images/info/view-from-farm_medium.jpg 1500w',
-              'assets/images/info/view-from-farm_small.jpg 600w'
-            ],
-            '(min-width: 37.5em) 33.3vw, 100vw'
-          ) }}
-
-        </figure>
-        <header>
-          <h3 class="h3">Locally grown, fresh produce</h3>
-        </header>
-        <article>
-          <ul class="list list--bullet">
-            <li class="list__item">~1 mile from Oxford city centre</li>
-            <li class="list__item">minimal food miles</li>
-            <li class="list__item">Oxfords 1st mushroom freight farm</li>
-            <li class="list__item">fresh Shiitake and Oyster mushrooms</li>
-            <li class="list__item">low carbon footprint</li>
-          </ul>
-        </article>
-      </li>
-      <li class="grid__col-1-3">
-        <figure class="img">
-
-          {{ image(
-            'assets/images/info/shiitake.jpg',
-            'Oxford Mushroom Co. - Shiitake mushrooms',
-            [
-              'assets/images/info/shiitake_large.jpg 2000w',
-              'assets/images/info/shiitake_medium.jpg 1500w',
-              'assets/images/info/shiitake_small.jpg 600w'
-            ],
-            '(min-width: 37.5em) 33.3vw, 100vw'
-          ) }}
-
-        </figure>
-        <header>
-          <h3 class="h3">Environmentally friendly</h3>
-        </header>
-        <article>
-          <ul class="list list--bullet">
-            <li class="list__item">re-purposed ex MOD shipping containers</li>
-            <li class="list__item">recycled, biodegradable, compostable packaging</li>
-            <li class="list__item">solar panels <span class="side-note">(coming soon)</span></li>
-            <li class="list__item">rain water harvesting <span class="side-note">(coming soon)</span></li>
-          </ul>
-        </article>
-      </li>
-    </ul>
-  </section>
-  <section class="centered-section">
-    <div class="divider"></div>
-    <h2 class="h2" id="contact-us">Contact us</h2>
-    <p>If you would like to know how we can supply delicious mushrooms to you or your business or would like to find out
-      more about our passion for mushrooms please do get in contact.</p>
-    <div class="location">
-      <div class="location__social">
-        <ul class="list">
-          <li class="list__item">
-            <div class="contact-title">Email:</div>
-            <a href="mailto:info&#64;oxfordmushroomco.com" class="link">info&#64;oxfordmushroomco.com</a>
-          </li>
-          <li class="list__item">
-            <div class="contact-title">Mobile:</div>
-            <a href="tel:07505884986" class="link">07505 884986</a>
-          </li>
-          <li class="list__item">
-            <div class="contact-title">Phone:</div>
-            <a href="tel:01865456363" class="link">01865 456363</a>
-          </li>
-          <li class="list__item">
-            <div class="is-visually-hidden">facebook:</div>
-            <a class="contact-link" rel="external" href="https://www.facebook.com/oxfordmushroomco">
-              <div class="contact-title">
-                {{ icon('facebook-icon', 'facebook:', 'icon--large') }}
-              </div>
-              facebook
-            </a>
-          </li>
-          <li class="list__item">
-            <div class="is-visually-hidden">twitter:</div>
-            <a class="contact-link" rel="external" href="https://twitter.com/OxfordMushrooms">
-              <div class="contact-title">
-                {{ icon('twitter-icon', 'twitter:', 'icon--large') }}
-              </div>
-              twitter
-            </a>
-          </li>
-          <li class="list__item">
-            <div class="is-visually-hidden">instagram:</div>
-            <a class="contact-link" rel="external" href="https://www.instagram.com/oxfordmushroomco">
-              <div class="contact-title">
-                {{ icon('instagram-icon', 'instagram:', 'icon--large') }}
-              </div>
-              instagram
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="location__map">
-        <div class="map" id="map">
-          <img src="assets/images/map.png" alt="Oxford Mushroom Co. Location map">
+        <div class="grid-gallery__description">
+          <h2 class="h2" id="about-us">Exotic mushrooms</h2>
+          <p>
+            Our mushrooms are grown inside specially modified ex-Ministry Of Defence shipping containers making
+            us Oxfords first mushroom freight farm! Because of this we maintain a low carbon foot print and can provide
+            fresh produce that is pesticide free, with minimal food miles.
+          </p>
+          <p>
+            Shiitake and Oyster mushrooms with medicinal healing properties, a great flavour and with
+            high nutritional value that have been grown on sustainably sourced oak sawdust. Are available in Oxford.
+          </p>
         </div>
-      </div>
-      <div class="location__address">
-        <div class="contact-title">Address:</div>
-        <ul class="list">
-          <li class="list__item">Oxford Mushroom Co.</li>
-          <li class="list__item">Hinksey Heights,</li>
-          <li class="list__item">South Hinksey,</li>
-          <li class="list__item">Oxford,</li>
-          <li class="list__item">OX1 5AB.</li>
-        </ul>
+
+        <div class="grid-gallery__img-one">
+          {{ FigureImage({
+            src: 'assets/images/square_5.jpg',
+            alt: '',
+            srcSet: [],
+            sizes: '(min-width: 37.5em) 33.3vw, 100vw',
+            caption: 'Oyster mushrooms in a wooden bowl'
+          }) }}
+        </div>
+
+        <div class="grid-gallery__img-two">
+          {{ FigureImage({
+            src: 'assets/images/square_6.jpg',
+            alt: '',
+            srcSet: [],
+            sizes: '(min-width: 37.5em) 33.3vw, 100vw',
+            caption: 'Shiitake and Oyster on our market stall'
+          }) }}
+        </div>
+
+        <div class="grid-gallery__img-three">
+          {{ FigureImage({
+            src: 'assets/images/square_0.jpg',
+            alt: '',
+            srcSet: [],
+            sizes: '(min-width: 37.5em) 33.3vw, 100vw',
+            caption: 'Shiitake selection'
+          }) }}
+        </div>
+
+        <div class="grid-gallery__img-four">
+          {{ FigureImage({
+            src: 'assets/images/square_1.jpg',
+            alt: '',
+            srcSet: [],
+            sizes: '(min-width: 37.5em) 33.3vw, 100vw',
+            caption: 'Shiitake and Oyster on our market stall'
+          }) }}
+          </figure>
+        </div>
+
+        <div class="grid-gallery__img-five">
+          {{ FigureImage({
+            src: 'assets/images/square_2.jpg',
+            alt: '',
+            srcSet: [],
+            sizes: '(min-width: 37.5em) 33.3vw, 100vw',
+            caption: 'A selection of mushrooms at market'
+          }) }}
+        </div>
+
+        <div class="grid-gallery__img-six">
+          {{ FigureImage({
+            src: 'assets/images/square_3.jpg',
+            alt: '',
+            srcSet: [],
+            sizes: '(min-width: 37.5em) 33.3vw, 100vw',
+            caption: 'Beautiful yellow and pink mushrooms'
+          }) }}
+        </div>
+
       </div>
     </div>
+  </section>
+
+  <section class="centered-section">
+    {{ Image({
+      src: 'assets/images/bird.jpg',
+      className: 'divider-image',
+      alt: '',
+      srcSet: [],
+      sizes: '(min-width: 37.5em) 33.3vw, 100vw'
+    }) }}
+  </section>
+
+  <section class="centered-section">
+
+
+    <div class="grid-hero">
+
+      <div class="grid-hero__description">
+        <h2 class="h2" id="about-us">Locally grown, fresh produce</h2>
+        <p>
+          Our mushrooms are grown 1 mile (approx) from Oxford city centre. This means they have minimal food miles and a
+          low carbon footprint.
+        </p>
+        <p>
+          We are Oxfords 1st mushroom freight farm, providing fresh Shiitake and Oyster mushrooms to our local
+          community. That are fresh and pesticide free.
+        </p>
+        <p>
+          We also have exciting future plans for bringing solar panels and rain water harvesting to our container growing setup.
+        </p>
+      </div>
+
+      <div class="grid-hero__img-main">
+        {{ FigureImage({
+          src: 'assets/images/market-stall.jpg',
+          alt: 'Oxford Mushroom Co. - Our market stall offerings',
+          srcSet: [],
+          sizes: '100vw',
+          caption: 'Our Shiitake and Oyster mushrooms for sale at the market'
+        }) }}
+      </div>
+
+      <div class="grid-hero__img-one">
+        {{ FigureImage({
+          src: 'assets/images/square_10.jpg',
+          alt: 'Oxford Mushroom Co. - Shiitake mushrooms',
+          srcSet: [],
+          sizes: '100vw',
+          caption: 'Our mushrooms on our market stall'
+        }) }}
+      </div>
+
+      <div class="grid-hero__img-two">
+        {{ FigureImage({
+          src: 'assets/images/square_13.jpg',
+          alt: 'Oxford Mushroom Co. - Shiitake mushrooms',
+          srcSet: [],
+          sizes: '100vw',
+          caption: 'Mushrooms cut and ready to go to market'
+        }) }}
+      </div>
+
+      <div class="grid-hero__img-three">
+        {{ FigureImage({
+          src: 'assets/images/square_16.jpg',
+          alt: 'Oxford Mushroom Co. - Shiitake mushrooms',
+          srcSet: [],
+          sizes: '100vw',
+          caption: 'Mushrooms off to market'
+        }) }}
+      </div>
+
+      <div class="grid-hero__img-four">
+        {{ FigureImage({
+          src: 'assets/images/square_15.jpg',
+          alt: 'Oxford Mushroom Co. - Shiitake mushrooms',
+          srcSet: [],
+          sizes: '100vw',
+          caption: 'Our mushrooms, fresh and dried on display'
+        }) }}
+      </div>
+    </div>
+  </section>
+
+  <section class="centered-section">
+    {{ Image({
+      src: 'assets/images/leaf.jpg',
+      className: 'divider-image',
+      alt: '',
+      srcSet: [],
+      sizes: '(min-width: 37.5em) 33.3vw, 100vw'
+    }) }}
+  </section>
+
+  <section class="section-highlight">
+    <div class="centered-section">
+      <div class="grid-gallery">
+
+        <div class="grid-gallery__description">
+          <h2 class="h2" id="about-us">Environmentally friendly</h2>
+          <p>
+            Our mushrooms are grown in re-purposed ex MOD shipping containers and grown on sustainably sourced oak
+            sawdust. We provide them in recycled, biodegradable, compostable packaging.
+          </p>
+        </div>
+
+        <div class="grid-gallery__img-one">
+          {{ FigureImage({
+            src: 'assets/images/square_7.jpg',
+            alt: 'Oxford Mushroom Co. - Shiitake mushrooms',
+            srcSet: [],
+            sizes: '100vw',
+            caption: 'Mushrooms in recycled packaging'
+          }) }}
+        </div>
+
+        <div class="grid-gallery__img-two">
+          {{ FigureImage({
+            src: 'assets/images/square_8.jpg',
+            alt: 'Oxford Mushroom Co. - Shiitake mushrooms',
+            srcSet: [],
+            sizes: '100vw',
+            caption: 'Biodegradable and compostable packaging'
+          }) }}
+        </div>
+
+        <div class="grid-gallery__img-three">
+          {{ FigureImage({
+            src: 'assets/images/square_9.jpg',
+            alt: '',
+            srcSet: [],
+            sizes: '100vw',
+            caption: 'Shiitake growing on oak sawdust blocks'
+          }) }}
+        </div>
+
+        <div class="grid-gallery__img-four">
+          {{ FigureImage({
+            src: 'assets/images/square_14.jpg',
+            alt: '',
+            srcSet: [],
+            sizes: '100vw',
+            caption: 'Mushrooms growing in our containers'
+          }) }}
+        </div>
+
+        <div class="grid-gallery__img-five">
+          {{ FigureImage({
+            src: 'assets/images/square_18.jpg',
+            alt: '',
+            srcSet: [],
+            sizes: '100vw',
+            caption: 'Mushrooms growing on oak sawdust blocks'
+          }) }}
+        </div>
+
+        <div class="grid-gallery__img-six">
+          {{ FigureImage({
+            src: 'assets/images/square_11.jpg',
+            alt: '',
+            srcSet: [],
+            sizes: '100vw',
+            caption: 'Our wonderfull compost heap'
+          }) }}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="centered-section">
+    {{ Image({
+      src: 'assets/images/acorn.jpg',
+      className: 'divider-image',
+      alt: '',
+      srcSet: [],
+      sizes: '(min-width: 37.5em) 33.3vw, 100vw'
+    }) }}
+  </section>
+
+  <section class="centered-section">
+    <div class="grid-friends">
+
+      <div class="grid-friends__intro">
+        <h2 class="h2" id="our-friends">Friends</h2>
+      </div>
+
+      <div class="grid-friends__one-media">
+        <a rel="external" href="http://goodfoodoxford.org/">
+          {{ Icon({
+            id: 'good-food-oxford-icon',
+            fallbackText: 'Good Food Oxford'
+          }) }}
+        </a>
+      </div>
+
+      <div class="grid-friends__one-about">
+        <h3 class="h3">Good Food Oxford</h3>
+        <p>
+          <a rel="external" href="http://goodfoodoxford.org/">Good Food Oxford</a> is a network for a better food system in Oxford, working together for healthy, fair, sustainable and tasty food.
+        </p>
+      </div>
+
+      <div class="grid-friends__two-media">
+        <a rel="external" href="https://landworkersalliance.org.uk/">
+          {{ Icon({
+            id: 'land-workers-alliance-icon',
+            fallbackText: 'Land Workers Alliance'
+          }) }}
+        </a>
+      </div>
+
+      <div class="grid-friends__two-about">
+        <h3 class="h3">Land Workers Alliance</h3>
+        <p>
+          <a rel="external" href="https://landworkersalliance.org.uk/">Land Workers Alliance</a> is a grassroots union of farmers, growers and land-based workers with a mission to improve the livelihoods of our members and create a better food system for everyone.
+        </p>
+      </div>
+
+      <div class="grid-friends__three-media">
+        <a rel="external" href="https://www.eastoxfordmarket.org.uk/">
+          {{ Image({
+            src: 'assets/images/east-oxford-community-market.jpg',
+            alt: '',
+            srcSet: [],
+            sizes: '100vw'
+          }) }}
+        </a>
+      </div>
+
+      <div class="grid-friends__three-about">
+        <h3 class="h3">The East Oxford Farmers' & Community Market</h3>
+        <p>
+          <a rel="external" href="https://www.eastoxfordmarket.org.uk/">The East Oxford Farmers' & Community Market</a> is a small, friendly local market which can provide the staples for your weekly shop
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  {# TODO Replace with other divider image #}
+  <section class="centered-section">
+    {{ Image({
+      src: 'assets/images/leaf.jpg',
+      className: 'divider-image',
+      alt: '',
+      srcSet: [],
+      sizes: '(min-width: 37.5em) 33.3vw, 100vw'
+    }) }}
+  </section>
+
+  <section class="section-highlight">
+    <div class="centered-section">
+      <div class="grid-contact">
+        <div class="grid-contact__description">
+          <h2 class="h2" id="contact-us">Contact</h2>
+        </div>
+
+        <div class="grid-contact__details">
+          <ul class="list">
+            <li class="list__item">
+              <span class="contact-title">Email:</span>
+              <a href="mailto:info&#64;oxfordmushroomco.com">info&#64;oxfordmushroomco.com</a>
+            </li>
+
+            <li class="list__item">
+              <span class="contact-title">Mobile:</span>
+              <a href="tel:07505884986">07505 884986</a>
+            </li>
+
+            <li class="list__item">
+              <span class="contact-title">Phone:</span>
+              <a href="tel:01865456363">01865 456363</a>
+            </li>
+
+            <li class="list__item">
+              <span class="contact-title">facebook:</span>
+              <a class="contact-link" rel="external" href="https://www.facebook.com/oxfordmushroomco">
+                {{ Icon({
+                  id: 'facebook-icon',
+                  fallbackText: 'facebook:'
+                }) }}
+              </a>
+            </li>
+
+            <li class="list__item">
+              <span class="contact-title">twitter:</span>
+              <a class="contact-link" rel="external" href="https://twitter.com/OxfordMushrooms">
+                {{ Icon({
+                  id: 'twitter-icon',
+                  fallbackText: 'twitter:'
+                }) }}
+              </a>
+            </li>
+
+            <li class="list__item">
+              <span class="contact-title">instagram:</span>
+              <a class="contact-link" rel="external" href="https://www.instagram.com/oxfordmushroomco">
+                {{ Icon({
+                  id: 'instagram-icon',
+                  fallbackText: 'instagram:'
+                }) }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid-contact__address">
+          <div class="contact-title">Address:</div>
+          <ul class="list">
+            <li class="list__item">Oxford Mushroom Co.</li>
+            <li class="list__item">Hinksey Heights,</li>
+            <li class="list__item">South Hinksey,</li>
+            <li class="list__item">Oxford,</li>
+            <li class="list__item">OX1 5AB.</li>
+          </ul>
+        </div>
+
+        <div class="grid-contact__map">
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3936.1155569179446!2d-1.2802344672586639!3d51.74060552627881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1517140241237"
+            width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {# TODO Replace with other divider image #}
+  <section class="centered-section">
+    {{ Image({
+      src: 'assets/images/mushrooms.jpg',
+      className: 'divider-image',
+      alt: '',
+      srcSet: [],
+      sizes: '(min-width: 37.5em) 33.3vw, 100vw'
+    }) }}
   </section>
 {% endblock %}

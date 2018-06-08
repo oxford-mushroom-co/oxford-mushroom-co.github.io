@@ -1,7 +1,8 @@
-{% from "templates/_macros/icon.njk" import icon %}
-{% from "templates/_macros/image.njk" import image %}
-{% from "templates/_macros/facebook-open-graph.njk" import facebookOpenGraph %}
-{% from "templates/_macros/twitter-card.njk" import twitterCard %}
+{% from "templates/_macros/icon.njk" import Icon %}
+{% from "templates/_macros/image.njk" import Image %}
+{% from "templates/_macros/figure-image.njk" import FigureImage %}
+{% from "templates/_macros/facebook-open-graph.njk" import FacebookOpenGraph %}
+{% from "templates/_macros/twitter-card.njk" import TwitterCard %}
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +19,7 @@
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   {% include "templates/_includes/old-ie.njk" %}
 
@@ -28,16 +29,13 @@
 
   {% include "templates/_includes/svg-icons.njk" %}
 
-  <script src='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css' rel='stylesheet' />
-
   {% block twitter %}{% endblock %}
   {% block facebook %}{% endblock %}
 
   <title>{{ siteName }}</title>
 </head>
 <body>
-  <main class="main">
+  <main>
     {% block header %}
       <header class="is-visually-hidden">
         <h1>Oxford Mushroom Co.</h1>
@@ -46,7 +44,6 @@
     {% block content %}{% endblock %}
   </main>
   {% include "templates/_includes/footer.njk" %}
-  {% include "templates/_includes/scripts.njk" %}
-  {% include "templates/_includes/google-analytics.njk" %}
+  {#{% include "templates/_includes/google-analytics.njk" %}#}
 </body>
 </html>

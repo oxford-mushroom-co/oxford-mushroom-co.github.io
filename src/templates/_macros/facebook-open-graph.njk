@@ -1,9 +1,10 @@
-{% macro facebookOpenGraph(url, title, description, image, type='website') %}
+{% macro FacebookOpenGraph(props) %}
+  {% set type = props.type | default('website') %}
 
-<meta property="og:url"                content="{{ url }}"/>
-<meta property="og:type"               content="{{ type }}"/>
-<meta property="og:title"              content="{{ title }}"/>
-<meta property="og:description"        content="{{ description }}"/>
-<meta property="og:image"              content="{{ image }}"/>
+  <meta property="og:url"         content="{{ props.url }}"/>
+  <meta property="og:type"        content="{{ type }}"/>
+  <meta property="og:title"       content="{{ props.title }}"/>
+  <meta property="og:description" content="{{ props.description }}"/>
+  <meta property="og:image"       content="{{ props.image }}"/>
 
 {% endmacro %}

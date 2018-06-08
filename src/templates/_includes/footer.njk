@@ -1,45 +1,41 @@
 <footer class="footer" role="contentinfo">
   <section class="centered-section">
-    <div class="footer__primary">
-      <ul class="list list--inline">
-        <li class="list__item">
-          <a rel="external" href="https://www.facebook.com/oxfordmushroomco">
-            {{ icon('facebook-icon', 'facebook') }}
-          </a>
-        </li>
-        <li class="list__item">
-          <a rel="external" href="https://twitter.com/OxfordMushrooms">
-            {{ icon('twitter-icon', 'twitter') }}
-          </a>
-        </li>
-        <li class="list__item">
-          <a rel="external" href="https://www.instagram.com/oxfordmushroomco">
-            {{ icon('instagram-icon', 'instagram') }}
-          </a>
-        </li>
-        <li class="list__item">
-          <a rel="external" href="https://github.com/oxford-mushroom-co/oxford-mushroom-co.github.io">
-            {{ icon('github-icon', 'github') }}
-          </a>
-        </li>
-      </ul>
-      <p>
-        Oxford Mushroom Company {{ currentYear }}©
-      </p>
-    </div>
-    <div class="footer__secondary">
-      <ul class="list list--inline">
-        <li class="list__item">
-          <a rel="external" href="http://goodfoodoxford.org/network/">
-            {{ icon('good-food-oxford-icon', 'Good Food Oxford') }}
-          </a>
-        </li>
-        <li class="list__item">
-          <a rel="external" href="https://landworkersalliance.org.uk/">
-            {{ icon('land-workers-alliance-icon', 'Land Workers Alliance') }}
-          </a>
-        </li>
-      </ul>
-    </div>
+    <ul class="list list--inline list--wide">
+      <li class="list__item">
+        <a rel="external" href="https://www.facebook.com/oxfordmushroomco">
+          {{ Icon({
+            id: 'facebook-icon',
+            fallbackText: 'facebook'
+          }) }}
+        </a>
+      </li>
+      <li class="list__item">
+        <a rel="external" href="https://twitter.com/OxfordMushrooms">
+          {{ Icon({
+            id: 'twitter-icon',
+            fallbackText: 'twitter'
+          }) }}
+        </a>
+      </li>
+      <li class="list__item">
+        <a rel="external" href="https://www.instagram.com/oxfordmushroomco">
+          {{ Icon({
+            id: 'instagram-icon',
+            fallbackText: 'instagram'
+          }) }}
+        </a>
+      </li>
+      <li class="list__item">
+        <a rel="external" href="https://github.com/oxford-mushroom-co/oxford-mushroom-co.github.io">
+          {{ Icon({
+            id: 'github-icon',
+            fallbackText: 'github'
+          }) }}
+        </a>
+      </li>
+    </ul>
+    <p class="footer__copyright">
+      Oxford Mushroom Company 2017 - {{ currentYear }}©
+    </p>
   </section>
 </footer>

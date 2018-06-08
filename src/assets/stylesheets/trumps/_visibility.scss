@@ -4,8 +4,8 @@
   display: none !important;
 }
 
-.hide-old-ie {
-  display: block;
+.hide-old-ie { // TODO not too sure about this, is it needed?
+  display: inline-block;
 
   @include old-ie {
     display: none;

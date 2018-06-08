@@ -1,13 +1,6 @@
 @charset "UTF-8";
-
 @import "generic/normalize";
-
 @import "elements/base";
-
-@import "objects/grid";
-@import "objects/layout";
-
+@import "objects/index";
 @import "components/index";
-
 @import "trumps/visibility";
-@import "trumps/mapbox";

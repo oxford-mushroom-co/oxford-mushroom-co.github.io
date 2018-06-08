@@ -1,0 +1,24 @@
+@import "../settings/vars";
+@import "../settings/colours";
+
+.list {
+  list-style: none;
+}
+
+.list__item {
+  vertical-align: top;
+  margin-bottom: $gutter/2;
+}
+
+.list--inline {
+  .list__item {
+    vertical-align: text-top;
+    display: inline-block;
+    padding-right: $gutter;
+    margin-bottom: 0;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

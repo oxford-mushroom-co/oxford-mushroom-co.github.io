@@ -3,22 +3,29 @@
 @import "../tools/media-query";
 
 // https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/
-.icon-wrapper {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-}
-
 .icon {
   width: 24px;
   height: 24px;
+}
+
+.icon--large {
+  width: 36px;
+  height: 36px;
+}
+
+.arrow-icon {
+  stroke: $mushroom-white;
+
+  &:hover {
+    stroke: $mushroom-grey;
+  }
 }
 
 .github-icon {
   fill: $off-black;
 
   &:hover {
-    fill: darken($grey, 20%);
+    fill: lighten($off-black, 10);
   }
 }
 
@@ -26,7 +33,7 @@
   fill: $facebook;
 
   &:hover {
-    fill: lighten($facebook, 20%);
+    fill: lighten($facebook, 10);
   }
 }
 
@@ -34,15 +41,15 @@
   fill: $twitter;
 
   &:hover {
-    fill: lighten($twitter, 10%);
+    fill: lighten($twitter, 10);
   }
 }
 
 .instagram-icon {
-  fill: $black;
+  fill: $off-black;
 
   &:hover {
-    fill: lighten($black, 40%);
+    fill: lighten($off-black, 10);
   }
 }
 
@@ -52,17 +59,16 @@
   fill: $good-food-oxford;
 
   &:hover {
-    fill: lighten($good-food-oxford, 5%);
+    fill: lighten($good-food-oxford, 10);
   }
 }
 
 .land-workers-alliance-icon {
   width: 180px;
   height: 132px;
-  fill: $black;
-  margin-right: $gutter;
+  fill: $off-black;
 
   &:hover {
-    fill: lighten($black, 40%);
+    fill: lighten($off-black, 10);
   }
 }

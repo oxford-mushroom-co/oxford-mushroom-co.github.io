@@ -1,41 +1,23 @@
 @import "../settings/colours";
 @import "../settings/vars";
 @import "../tools/media-query";
-@import "../tools/old-ie";
 
 .h1 {
   color: $off-black;
-  margin-top: $gutter/2;
-  font-size: $font-30;
+  font-size: $font-36;
   line-height: 1.2;
 
   @include media-query(600px) {
-    font-size: $font-36;
-    margin-top: $gutter;
-  }
-
-  @include old-ie {
-    font-size: $font-36;
-    margin-top: $gutter;
+    font-size: $font-48;
   }
 }
 
 .h2 {
-  font-size: $font-24;
+  font-size: $font-30;
   line-height: 1.4;
   margin-bottom: $gutter/2;
 
   @include media-query(600px) {
-    font-size: $font-30;
+    font-size: $font-36;
   }
-
-  @include old-ie {
-    font-size: $font-30;
-  }
-}
-
-.h3 {
-  font-size: $font-18;
-  line-height: 1.2;
-  margin-bottom: $gutter/2;
 }

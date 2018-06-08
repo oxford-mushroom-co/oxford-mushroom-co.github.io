@@ -1,43 +1,50 @@
 @import "../settings/vars";
 @import "../settings/colours";
 @import "../tools/media-query";
-@import "../tools/old-ie";
 
 .hero {
-  padding: $gutter;
-  background-color: $brown;
-
-  @include media-query(1024px) {
-    position: relative;
-  }
-
-  @include old-ie {
-    position: relative;
-  }
+  overflow: hidden;
 }
 
 .hero__logo {
-  margin: 0 auto;
-  padding: $gutter;
-  max-height: 500px;
+  width: 380px;
+  height: 380px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -160px;
+  bottom: 0;
+  z-index: 200;
 
-  @include media-query(1024px) {
-    width: 30%;
-  }
-
-  @include old-ie {
-    width: 30%;
+  @include media-query(800px) {
+    width: 500px;
+    height: 500px;
   }
 }
 
-.hero__action-bar {
+.hero__img {
+  width: 100vw;
+  height: 85vh;
+  object-fit: cover;
+}
+
+.hero__social-bar {
+  width: 100%;
+  z-index: 200;
+  padding: $gutter/2;
+  position: absolute;
+  top: 0;
+  left: 0;
   text-align: right;
+}
 
-  @include media-query(1024px) {
-    text-align: left;
-  }
-
-  @include old-ie {
-    text-align: left;
-  }
+.hero__action-bar {
+  width: 100%;
+  z-index: 200;
+  padding: $gutter;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
 }

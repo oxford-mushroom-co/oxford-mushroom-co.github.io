@@ -16,9 +16,8 @@ body {
 
 html {
   box-sizing: border-box;
-  font-size: 100%; // http://alistapart.com/article/howtosizetextincss
-  letter-spacing: .2px;
-  line-height: 1.8;
+  font-size: 110%; // http://alistapart.com/article/howtosizetextincss
+  line-height: 1.6;
   color: $off-black;
 }
 
@@ -30,7 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-family: Raleway, helvetica neue, helvetica, arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
   text-size-adjust: 100%;
 }
 
@@ -59,26 +58,35 @@ ul {
   margin: 0;
 }
 
-p {
-  font-size: $font-16;
-
-  @include media-query(1040px) {
-    font-size: $font-18;
-  }
-}
-
 img {
   height: auto;
   display: block;
   max-width: 100%;
+  border-radius: 2px;
 
   @include old-ie {
     width: 100%;
   }
 }
 
+a {
+  color: $darker-brown;
+  outline: 2px solid transparent;
+  text-decoration-skip-ink: auto;
+  text-decoration-skip: ink;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 2px solid $orange;
+    background-color: $orange;
+  }
+}
+
 ::selection {
-  background: $dark-brown;
+  background: $lighter-brown;
   text-shadow: none;
 }
 

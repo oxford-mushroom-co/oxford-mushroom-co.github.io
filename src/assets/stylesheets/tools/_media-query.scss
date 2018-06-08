@@ -1,5 +1,13 @@
-@mixin media-query($width, $mediaType: screen) {
+@import "../tools/old-ie";
+
+@mixin media-query($width, $mediaType: screen, $ieFallback: true) {
   @media #{$mediaType} and (min-width: #{$width}) {
     @content;
+  }
+
+  if($ieFallback) {
+    @include old-ie {
+      @content;
+    }
   }
 }

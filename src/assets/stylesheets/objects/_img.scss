@@ -1,0 +1,21 @@
+@import "../tools/media-query";
+@import "../settings/vars";
+@import "../settings/colours";
+
+.img {
+  margin-bottom: $gutter;
+
+  @include media-query(900px) {
+    margin-bottom: 0;
+  }
+}
+
+.img__caption {
+  margin-top: $gutter/2;
+  font-size: $font-14;
+  color: $dark-brown;
+
+  a {
+    color: $dark-brown;
+  }
+}

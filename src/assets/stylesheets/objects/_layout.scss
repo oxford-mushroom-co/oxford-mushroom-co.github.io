@@ -1,17 +1,38 @@
 @import "../settings/vars";
+@import "../settings/colours";
 @import "../tools/media-query";
 @import "../tools/old-ie";
+@import "../tools/clearfix";
 
 .centered-section {
-  margin: $gutter * 2 auto;
-  padding: 0 $gutter;
+  padding: $gutter/2 $gutter;
+  margin: $gutter auto;
   max-width: $content-max-width;
+
+  @supports (display: grid) {
+    padding: $gutter/2 $gutter;
+  }
+
+  @include media-query(1000px) {
+    margin-top: $gutter*2.5;
+    margin-bottom: $gutter*2.5;
+  }
 
   @include old-ie {
     width: $content-max-width;
   }
 }
 
-.centered-section--compact {
+.divider-image {
+  margin: 0 auto;
+}
+
+.section-highlight {
+  @include clearfix;
+
+  background-color: $lighter-brown;
+}
+
+.centered-element {
   margin: 0 auto;
 }

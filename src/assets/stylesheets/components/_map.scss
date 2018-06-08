@@ -1,25 +1,5 @@
 @import "../settings/colours";
-@import "../settings/vars";
 
 .map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-
-.marker {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: $white;
-  border: 4px solid $black;
-}
-
-.popup {
-  padding: $gutter/2;
-  color: $off-black;
-  font-weight: 600;
+  border: 1px solid $white;
 }

@@ -1,11 +1,12 @@
 const fs = require('fs')
 const nunjucks = require('nunjucks')
-const nunjucksGlobals = require('../src/nunjucks/globals')
+const { globals, filters } = require('../src/nunjucks')
 const env = nunjucks.configure(`${__dirname}/../src/`, {
   autoescape: true
 })
 
-nunjucksGlobals(env)
+globals(env)
+filters(env)
 
 const htmlFilesToRender = new Promise((resolve, reject) => {
   fs.readdir('src/templates/views/', (err, files) => {

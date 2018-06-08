@@ -35,7 +35,8 @@ module.exports = (ctx) => ({
         '> 2%',
         'last 2 versions',
         'ie >= 7'
-      ]
+      ],
+      grid: false
     }
   }
 })

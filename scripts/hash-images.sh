@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 STYLESHEETS=( ./dist/assets/stylesheets/*.css )
-IMAGES=( ./dist/assets/images/**/*.jpg ./dist/assets/images/*.png ./dist/assets/images/*.svg) # TODO improve this glob
+IMAGES=( ./dist/assets/images/**/*.jpg ./dist/assets/images/**/*.png ./dist/assets/images/**/*.svg ./dist/assets/images/*.jpg) # TODO improve this glob
 HTML=( ./dist/*.html )
 
 function replaceAssets {

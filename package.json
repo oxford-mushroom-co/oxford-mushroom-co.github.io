@@ -1,6 +1,6 @@
 {
   "name": "oxfordMushroomCompany",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Website for the Oxford Mushroom Company",
   "scripts": {
     "clean:dist": "rm -rf dist && mkdir -p dist/assets/{images,stylesheets}",

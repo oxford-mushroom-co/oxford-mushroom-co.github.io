@@ -21,7 +21,9 @@
     "hash:assets": "scripts/hash-assets.sh",
     "hash:images": "scripts/hash-images.sh",
     "integrity:assets": "scripts/integrity-assets.sh",
-    "deploy": "scripts/deploy.sh"
+    "deploy": "scripts/deploy.sh",
+    "prestart": "npm run build",
+    "start": "node ./demo-index.js"
   },
   "author": "feedMyPixel",
   "contributors": "Ben Chidgey <ben@feedmypixel.com>",

@@ -28,19 +28,18 @@
   "author": "feedMyPixel",
   "contributors": "Ben Chidgey <ben@feedmypixel.com>",
   "dependencies": {
-    "nunjucks": "3.0.0"
+    "nunjucks": "3.1.3",
+    "basic-auth": "2.0.0",
+    "express": "4.16.3",
+    "serve-favicon": "2.5.0"
   },
   "devDependencies": {
-    "autoprefixer": "6.7.7",
-    "babel-preset-es2015-rollup": "3.0.0",
-    "node-sass": "4.5.2",
-    "nodemon": "1.11.0",
-    "postcss-cli": "3.2.0",
-    "postcss-pxtorem": "4.0.0",
-    "rollup": "0.41.6",
-    "rollup-plugin-babel": "2.7.1",
-    "rollup-plugin-uglify": "1.0.2",
-    "standard": "10.0.2",
-    "stylelint": "7.10.1"
+    "autoprefixer": "8.6.0",
+    "node-sass": "4.9.0",
+    "nodemon": "1.17.5",
+    "postcss-cli": "5.0.0",
+    "postcss-pxtorem": "4.0.1",
+    "standard": "11.0.1",
+    "stylelint": "9.2.1"
   }
 }

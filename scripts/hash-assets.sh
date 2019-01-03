@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 STYLESHEETS=( ./dist/assets/stylesheets/*.css )
-JAVASCRIPTS=( ./dist/assets/javascripts/*.js )
 HTML=( ./dist/*.html )
 
 function replaceAssetsInHtml {
@@ -49,4 +48,3 @@ function createHash {
 set -o errexit
 echo "---- Hashing Public assets"
 hashAssets "${STYLESHEETS[@]}"
-hashAssets "${JAVASCRIPTS[@]}"

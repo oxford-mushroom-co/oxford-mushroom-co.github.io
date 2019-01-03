@@ -28,9 +28,6 @@
 
   {% include "templates/_includes/svg-icons.njk" %}
 
-  <script src='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css' rel='stylesheet' />
-
   {% block twitter %}{% endblock %}
   {% block facebook %}{% endblock %}
 
@@ -46,7 +43,6 @@
     {% block content %}{% endblock %}
   </main>
   {% include "templates/_includes/footer.njk" %}
-  {% include "templates/_includes/scripts.njk" %}
   {% include "templates/_includes/google-analytics.njk" %}
 </body>
 </html>
